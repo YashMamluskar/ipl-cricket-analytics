@@ -1,0 +1,286 @@
+/// One row per ball bowled (260,920), incl. 161 super-over balls flagged by is_super_over. Measures exclude super overs.
+table FactDelivery
+	lineageTag: a8573e92-94e5-5e91-bd8b-e8b4350e6ea1
+
+	column delivery_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d40c4090-3568-5d3e-8e03-1530473aa68c
+		summarizeBy: none
+		sourceColumn: delivery_id
+
+	column match_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c89cdd77-c41a-5c8c-8616-ce172114ee32
+		summarizeBy: none
+		sourceColumn: match_id
+
+	column season_year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 93e37a97-b821-57f6-8f1c-5a3fa92c2ef1
+		summarizeBy: none
+		sourceColumn: season_year
+
+	column venue_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6f143af9-a083-57aa-adeb-f5321e77f389
+		summarizeBy: none
+		sourceColumn: venue_key
+
+	column inning
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 41c5c10b-1a21-5abb-9ed4-d404786e20f9
+		summarizeBy: none
+		sourceColumn: inning
+
+	column is_super_over
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 743add03-6805-5f9d-bf9f-3dbd63877b56
+		summarizeBy: none
+		sourceColumn: is_super_over
+
+	column phase
+		dataType: string
+		isHidden
+		lineageTag: 13bc4fef-9fba-52b6-a021-952ed96677bf
+		summarizeBy: none
+		sourceColumn: phase
+
+	column over_number
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0470d6fe-3fb6-5def-9806-baead79d7794
+		summarizeBy: none
+		sourceColumn: over_number
+
+	column batting_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4482184d-1b71-50b7-809d-bdcf890c217e
+		summarizeBy: none
+		sourceColumn: batting_team_key
+
+	column bowling_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a8d36bfc-5a61-5d76-a277-182342656ee4
+		summarizeBy: none
+		sourceColumn: bowling_team_key
+
+	column batter_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 59e81b12-7b2b-53d5-9438-1e15e5d9892b
+		summarizeBy: none
+		sourceColumn: batter_key
+
+	column bowler_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d7d0f3c8-577b-53e2-a487-5a78f7b9f624
+		summarizeBy: none
+		sourceColumn: bowler_key
+
+	column batsman_runs
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8e410019-c23c-5daf-a690-dd2b14b8746e
+		summarizeBy: none
+		sourceColumn: batsman_runs
+
+	column extra_runs
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fc3a94f6-c24e-53bb-b35d-1a3abc135a43
+		summarizeBy: none
+		sourceColumn: extra_runs
+
+	column total_runs
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a2da804d-1d2f-50d7-ab80-27e0d64073af
+		summarizeBy: none
+		sourceColumn: total_runs
+
+	column bowler_runs_conceded
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1359c4c9-8251-58ae-af46-382be001cc3a
+		summarizeBy: none
+		sourceColumn: bowler_runs_conceded
+
+	column is_legal_delivery
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ae47ac29-dd15-59cc-88e6-186222934f7b
+		summarizeBy: none
+		sourceColumn: is_legal_delivery
+
+	column is_ball_faced
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 304eb1ac-43af-5438-9537-78862025b863
+		summarizeBy: none
+		sourceColumn: is_ball_faced
+
+	column is_dot_ball
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4cb8956a-f31c-51ea-9a2b-fcc6e53e9f56
+		summarizeBy: none
+		sourceColumn: is_dot_ball
+
+	column is_four
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7e31a1dc-9889-59ab-833c-6bf69589ba56
+		summarizeBy: none
+		sourceColumn: is_four
+
+	column is_six
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9ffe6792-63c3-5a96-9c2b-84dc29222610
+		summarizeBy: none
+		sourceColumn: is_six
+
+	column is_wide
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0c114e7d-d7ff-53d9-90e7-0be7e7e8ef6a
+		summarizeBy: none
+		sourceColumn: is_wide
+
+	column is_noball
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 39125cea-63f9-5802-8b2c-09644ed7176a
+		summarizeBy: none
+		sourceColumn: is_noball
+
+	column is_wicket_raw
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 88e3c5c5-63fe-532e-a774-40a950f7120e
+		summarizeBy: none
+		sourceColumn: is_wicket_raw
+
+	column is_player_out
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d0bef5cc-d18c-5f76-af5e-ccfa2aee1bd9
+		summarizeBy: none
+		sourceColumn: is_player_out
+
+	column is_bowler_wicket
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f17498ba-5ced-59b3-a618-099b66f027de
+		summarizeBy: none
+		sourceColumn: is_bowler_wicket
+
+	column is_seven_ball_over
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a651ca15-77af-59fb-b736-5626b3c4f119
+		summarizeBy: none
+		sourceColumn: is_seven_ball_over
+
+	column is_batter_dot
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 86b9cbc9-76c5-5d3d-9ddb-d0b1814d96f0
+		summarizeBy: none
+		sourceColumn: is_batter_dot
+
+	column wkts_before
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 76bdc5d4-cc52-5983-a3d3-506712e6b470
+		summarizeBy: none
+		sourceColumn: wkts_before
+
+	column 'Wickets lost before ball'
+		dataType: string
+		lineageTag: 154b8069-d3a4-536b-b2d2-2ef55fbdb504
+		summarizeBy: none
+		sourceColumn: wkts_lost_band
+
+	column is_close_match
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d160e120-c5ab-5fe4-a146-fbc5585fa119
+		summarizeBy: none
+		sourceColumn: is_close_match
+
+	column exp_runs
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: 7cd0954b-b046-5b64-b123-ebdaeb113b6c
+		summarizeBy: none
+		sourceColumn: exp_runs
+
+	column exp_bowler_runs
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: 2accbd62-93ac-50b6-86d9-8355cfafc98e
+		summarizeBy: none
+		sourceColumn: exp_bowler_runs
+
+	column exp_bowler_wkts
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: e932a3ec-2b1d-578b-bf35-ccd015fdf2a8
+		summarizeBy: none
+		sourceColumn: exp_bowler_wkts
+
+	partition FactDelivery = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/FactDelivery.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"delivery_id", "match_id", "season_year", "venue_key", "inning", "is_super_over", "phase", "over_number", "batting_team_key", "bowling_team_key", "batter_key", "bowler_key", "batsman_runs", "extra_runs", "total_runs", "bowler_runs_conceded", "is_legal_delivery", "is_ball_faced", "is_dot_ball", "is_four", "is_six", "is_wide", "is_noball", "is_wicket_raw", "is_player_out", "is_bowler_wicket", "is_seven_ball_over", "is_batter_dot", "wkts_before", "wkts_lost_band", "is_close_match", "exp_runs", "exp_bowler_runs", "exp_bowler_wkts"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"delivery_id", Int64.Type}, {"match_id", Int64.Type}, {"season_year", Int64.Type}, {"venue_key", Int64.Type}, {"inning", Int64.Type}, {"is_super_over", Int64.Type}, {"phase", type text}, {"over_number", Int64.Type}, {"batting_team_key", Int64.Type}, {"bowling_team_key", Int64.Type}, {"batter_key", Int64.Type}, {"bowler_key", Int64.Type}, {"batsman_runs", Int64.Type}, {"extra_runs", Int64.Type}, {"total_runs", Int64.Type}, {"bowler_runs_conceded", Int64.Type}, {"is_legal_delivery", Int64.Type}, {"is_ball_faced", Int64.Type}, {"is_dot_ball", Int64.Type}, {"is_four", Int64.Type}, {"is_six", Int64.Type}, {"is_wide", Int64.Type}, {"is_noball", Int64.Type}, {"is_wicket_raw", Int64.Type}, {"is_player_out", Int64.Type}, {"is_bowler_wicket", Int64.Type}, {"is_seven_ball_over", Int64.Type}, {"is_batter_dot", Int64.Type}, {"wkts_before", Int64.Type}, {"wkts_lost_band", type text}, {"is_close_match", Int64.Type}, {"exp_runs", type number}, {"exp_bowler_runs", type number}, {"exp_bowler_wkts", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,7 @@
+phase,batting_side_won,innings,median_rr,mean_wkts,dot_pct,boundary_pct,p_run_rate
+Death,0,571,9.4,2.62,29.64,18.31,0.0
+Death,1,489,10.8,2.43,24.99,23.94,0.0
+Middle,0,572,7.11,2.41,34.37,11.97,0.0
+Middle,1,489,8.33,2.01,28.89,15.37,0.0
+Powerplay,0,572,7.33,1.6,49.47,17.76,0.0
+Powerplay,1,489,8.0,1.11,45.23,20.65,0.0

@@ -1,0 +1,32 @@
+# --- Credentials & local configuration (never commit) ---
+config/mysql_config.ini
+config/*.local.ini
+.env
+.env.*
+*.mylogin.cnf
+
+# --- Large data files (download from Kaggle / regenerate with the scripts) ---
+/deliveries.csv
+/matches.csv
+data/raw/deliveries.csv
+data/processed/
+data/final/powerbi/FactDelivery.csv
+
+# --- Power BI local caches ---
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# --- Python / Jupyter ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Power BI temp files ---
+dashboard/*.pbix.bak
+~$*

@@ -1,0 +1,38 @@
+/// Powerplay 1-6, Middle 7-15, Death 16-20, Super Over.
+table DimPhase
+	lineageTag: 8affa223-799a-59fe-bdfd-6650c6281310
+
+	column Phase
+		dataType: string
+		lineageTag: ca686b9c-e765-595a-90a6-80886c5bd8ca
+		summarizeBy: none
+		sourceColumn: phase
+		sortByColumn: 'Phase order'
+
+	column 'Phase order'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5b5079b7-c3a3-5266-9212-89256b0d70af
+		summarizeBy: none
+		sourceColumn: phase_sort
+
+	column Overs
+		dataType: string
+		lineageTag: af756762-ed7b-5c86-ac7a-5928f7dc4eea
+		summarizeBy: none
+		sourceColumn: overs
+
+	partition DimPhase = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/DimPhase.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"phase", "phase_sort", "overs"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"phase", type text}, {"phase_sort", Int64.Type}, {"overs", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

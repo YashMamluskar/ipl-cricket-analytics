@@ -1,0 +1,9 @@
+team,seasons,mean_win_pct,sd_win_pct,best,worst,seasons_above_50,sd_expected_by_chance,sd_excess_over_chance
+Chennai Super Kings,15,57.8,11.0,68.8,28.6,12,12.4,-1.4
+Royal Challengers Bengaluru,17,48.2,11.2,62.5,23.1,8,13.0,-1.8
+Rajasthan Royals,15,50.5,11.4,81.2,35.7,5,13.1,-1.7
+Punjab Kings,17,45.0,12.4,70.6,21.4,2,13.1,-0.6
+Kolkata Knight Riders,17,51.7,13.0,78.6,23.1,9,13.0,0.0
+Sunrisers Hyderabad,12,47.6,13.0,64.7,21.4,5,12.8,0.2
+Mumbai Indians,17,54.1,13.8,70.6,28.6,9,12.7,1.1
+Delhi Capitals,17,45.4,15.0,66.7,14.3,5,13.0,2.0

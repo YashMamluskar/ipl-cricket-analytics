@@ -1,0 +1,65 @@
+relationship 6426d52b-4e18-5cb6-90aa-d3ad765be487
+	fromColumn: FactDelivery.season_year
+	toColumn: DimSeason.Season
+
+relationship a9008b75-8b96-565b-9037-afb3159b0e45
+	fromColumn: FactBattingInnings.season_year
+	toColumn: DimSeason.Season
+
+relationship 0f67365a-86c4-57f0-ab95-2ac2630dba5e
+	fromColumn: FactTeamMatch.season_year
+	toColumn: DimSeason.Season
+
+relationship 5e9c20da-47e2-5e9f-b42b-f76cf510c9ef
+	fromColumn: FactMatch.season_year
+	toColumn: DimSeason.Season
+
+relationship 07ab375b-6a59-5b99-984b-8cff884450c5
+	fromColumn: FactDelivery.venue_key
+	toColumn: DimVenue.venue_key
+
+relationship cba7da0a-a215-5e1b-ac63-6d93c2f9b088
+	fromColumn: FactBattingInnings.venue_key
+	toColumn: DimVenue.venue_key
+
+relationship 48c94190-eff0-5577-a98a-fd1415defd65
+	fromColumn: FactTeamMatch.venue_key
+	toColumn: DimVenue.venue_key
+
+relationship 124141a7-1e1f-5c66-8123-1555ea890d7d
+	fromColumn: FactMatch.venue_key
+	toColumn: DimVenue.venue_key
+
+relationship 59705aec-e59f-5391-91c5-c84257f5eb9e
+	fromColumn: FactTeamMatch.team_key
+	toColumn: DimTeam.team_key
+
+relationship 7bc59a4f-ef23-546d-b5fc-3cc67bf700fe
+	fromColumn: FactBattingInnings.team_key
+	toColumn: DimTeam.team_key
+
+relationship facac06e-bf1e-5ff5-b784-b28da2d2e373
+	fromColumn: FactDelivery.batting_team_key
+	toColumn: DimTeam.team_key
+
+relationship cf80f32f-2605-5f10-b0e0-9443639b85b6
+	isActive: false
+	fromColumn: FactDelivery.bowling_team_key
+	toColumn: DimTeam.team_key
+
+relationship 0d2342be-be56-520d-8647-ac1f71afbc96
+	fromColumn: FactDelivery.batter_key
+	toColumn: DimPlayer.player_key
+
+relationship 47b479bc-a0d1-5b74-bc95-4ee5a9b5fd12
+	isActive: false
+	fromColumn: FactDelivery.bowler_key
+	toColumn: DimPlayer.player_key
+
+relationship db31beb8-7ca8-5faa-b439-71689b7a42d3
+	fromColumn: FactBattingInnings.player_key
+	toColumn: DimPlayer.player_key
+
+relationship 12429983-a77d-5cb8-b92c-d5dcd0ad706f
+	fromColumn: FactDelivery.phase
+	toColumn: DimPhase.Phase

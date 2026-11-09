@@ -1,0 +1,16 @@
+margin_type,margin_band,matches,pct_of_type,frequency_rank
+Batting first (runs),1-10 runs,115,23.66,1
+Batting first (runs),11-20 runs,113,23.25,2
+Batting first (runs),21-30 runs,75,15.43,5
+Batting first (runs),31-50 runs,93,19.14,3
+Batting first (runs),51+ runs,90,18.52,4
+Chasing (wickets),01 wickets,4,0.7,10
+Chasing (wickets),02 wickets,10,1.76,9
+Chasing (wickets),03 wickets,31,5.45,7
+Chasing (wickets),04 wickets,58,10.19,5
+Chasing (wickets),05 wickets,96,16.87,3
+Chasing (wickets),06 wickets,119,20.91,1
+Chasing (wickets),07 wickets,113,19.86,2
+Chasing (wickets),08 wickets,76,13.36,4
+Chasing (wickets),09 wickets,47,8.26,6
+Chasing (wickets),10 wickets,15,2.64,8

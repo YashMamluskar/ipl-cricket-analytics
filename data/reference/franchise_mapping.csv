@@ -1,0 +1,20 @@
+team_original,franchise,franchise_short,mapping_type,decision_status,first_year,last_year,matches,note
+Chennai Super Kings,Chennai Super Kings,CSK,unchanged,NO CHANGE,2008,2024,238,
+Deccan Chargers,Deccan Chargers,DC-08,unchanged,NO CHANGE,2008,2012,75,Separate franchise (terminated 2012). Deliberately NOT merged with Sunrisers Hyderabad.
+Delhi Daredevils,Delhi Capitals,DC,historical rename,APPROVED 2026-11-08,2008,2018,161,"Same franchise renamed Delhi Capitals from IPL 2019 (data: DD 2008-2018, DC 2019-2024)."
+Delhi Capitals,Delhi Capitals,DC,unchanged,NO CHANGE,2019,2024,91,
+Gujarat Lions,Gujarat Lions,GL,unchanged,NO CHANGE,2016,2017,30,Two-season franchise 2016-17. Deliberately NOT merged with Gujarat Titans.
+Gujarat Titans,Gujarat Titans,GT,unchanged,NO CHANGE,2022,2024,45,New franchise from 2022. Deliberately NOT merged with Gujarat Lions.
+Kochi Tuskers Kerala,Kochi Tuskers Kerala,KTK,unchanged,NO CHANGE,2011,2011,14,
+Kolkata Knight Riders,Kolkata Knight Riders,KKR,unchanged,NO CHANGE,2008,2024,251,
+Lucknow Super Giants,Lucknow Super Giants,LSG,unchanged,NO CHANGE,2022,2024,44,
+Mumbai Indians,Mumbai Indians,MI,unchanged,NO CHANGE,2008,2024,261,
+Pune Warriors,Pune Warriors,PWI,unchanged,NO CHANGE,2011,2013,46,
+Kings XI Punjab,Punjab Kings,PBKS,historical rename,APPROVED 2026-11-08,2008,2020,190,"Same franchise renamed Punjab Kings from IPL 2021 (data: KXIP 2008-2020, PBKS 2021-2024)."
+Punjab Kings,Punjab Kings,PBKS,unchanged,NO CHANGE,2021,2024,56,
+Rajasthan Royals,Rajasthan Royals,RR,unchanged,NO CHANGE,2008,2024,221,
+Rising Pune Supergiants,Rising Pune Supergiants,RPS,unchanged,NO CHANGE,2016,2016,14,2016 spelling; chosen by owner as the standard name for the 2016-17 Pune franchise.
+Rising Pune Supergiant,Rising Pune Supergiants,RPS,spelling variant,APPROVED 2026-11-08,2017,2017,16,2017 spelling of the 2016-17 Pune franchise; merged into owner-chosen standard 'Rising Pune Supergiants'.
+Royal Challengers Bangalore,Royal Challengers Bengaluru,RCB,historical rename,APPROVED 2026-11-08,2008,2023,240,Same franchise; 'Bengaluru' spelling adopted for IPL 2024 (data: 2008-2023 vs 2024).
+Royal Challengers Bengaluru,Royal Challengers Bengaluru,RCB,unchanged,NO CHANGE,2024,2024,15,
+Sunrisers Hyderabad,Sunrisers Hyderabad,SRH,unchanged,NO CHANGE,2013,2024,182,Separate franchise from 2013. Deliberately NOT merged with Deccan Chargers.

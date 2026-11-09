@@ -1,0 +1,4 @@
+period,matches,par_score_50pct,par_ci_low,par_ci_high,runs_for_+10pp_at_par,slope_per_run
+2008-22,906.0,170.22,166.4,173.87,10.75,0.04
+2023-24,141.0,183.35,171.02,195.81,12.9,0.03
+difference (2023-24 minus 2008-22),,13.13,0.79,25.7,,

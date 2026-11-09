@@ -1,0 +1,758 @@
+section,table,rank,entity,metric,value
+Season,season_summary,1,2008.0,matches,58.0
+Season,season_summary,1,2008.0,runs,17937.0
+Season,season_summary,1,2008.0,bowler_wickets,604.0
+Season,season_summary,1,2008.0,player_outs,689.0
+Season,season_summary,1,2008.0,runs_per_match,309.259
+Season,season_summary,1,2008.0,run_rate,8.311
+Season,season_summary,1,2008.0,avg_inn1,163.296
+Season,season_summary,1,2008.0,avg_inn2,151.889
+Season,season_summary,1,2008.0,sixes_per_match,10.741
+Season,season_summary,1,2008.0,dot_pct,37.961
+Season,season_summary,1,2008.0,franchises,8.0
+Season,season_summary,2,2009.0,matches,57.0
+Season,season_summary,2,2009.0,runs,16320.0
+Season,season_summary,2,2009.0,bowler_wickets,621.0
+Season,season_summary,2,2009.0,player_outs,697.0
+Season,season_summary,2,2009.0,runs_per_match,286.316
+Season,season_summary,2,2009.0,run_rate,7.483
+Season,season_summary,2,2009.0,avg_inn1,150.333
+Season,season_summary,2,2009.0,avg_inn2,137.852
+Season,season_summary,2,2009.0,sixes_per_match,8.877
+Season,season_summary,2,2009.0,dot_pct,39.113
+Season,season_summary,2,2009.0,franchises,8.0
+Season,season_summary,3,2010.0,matches,60.0
+Season,season_summary,3,2010.0,runs,18864.0
+Season,season_summary,3,2010.0,bowler_wickets,627.0
+Season,season_summary,3,2010.0,player_outs,720.0
+Season,season_summary,3,2010.0,runs_per_match,314.4
+Season,season_summary,3,2010.0,run_rate,8.126
+Season,season_summary,3,2010.0,avg_inn1,164.783
+Season,season_summary,3,2010.0,avg_inn2,149.617
+Season,season_summary,3,2010.0,sixes_per_match,9.75
+Season,season_summary,3,2010.0,dot_pct,35.839
+Season,season_summary,3,2010.0,franchises,8.0
+Season,season_summary,4,2011.0,matches,73.0
+Season,season_summary,4,2011.0,runs,21154.0
+Season,season_summary,4,2011.0,bowler_wickets,739.0
+Season,season_summary,4,2011.0,player_outs,813.0
+Season,season_summary,4,2011.0,runs_per_match,289.781
+Season,season_summary,4,2011.0,run_rate,7.727
+Season,season_summary,4,2011.0,avg_inn1,155.551
+Season,season_summary,4,2011.0,avg_inn2,141.014
+Season,season_summary,4,2011.0,sixes_per_match,8.753
+Season,season_summary,4,2011.0,dot_pct,38.247
+Season,season_summary,4,2011.0,franchises,10.0
+Season,season_summary,5,2012.0,matches,74.0
+Season,season_summary,5,2012.0,runs,22453.0
+Season,season_summary,5,2012.0,bowler_wickets,772.0
+Season,season_summary,5,2012.0,player_outs,857.0
+Season,season_summary,5,2012.0,runs_per_match,303.419
+Season,season_summary,5,2012.0,run_rate,7.829
+Season,season_summary,5,2012.0,avg_inn1,158.37
+Season,season_summary,5,2012.0,avg_inn2,146.507
+Season,season_summary,5,2012.0,sixes_per_match,9.905
+Season,season_summary,5,2012.0,dot_pct,36.268
+Season,season_summary,5,2012.0,franchises,9.0
+Season,season_summary,6,2013.0,matches,76.0
+Season,season_summary,6,2013.0,runs,22541.0
+Season,season_summary,6,2013.0,bowler_wickets,829.0
+Season,season_summary,6,2013.0,player_outs,909.0
+Season,season_summary,6,2013.0,runs_per_match,296.592
+Season,season_summary,6,2013.0,run_rate,7.679
+Season,season_summary,6,2013.0,avg_inn1,156.56
+Season,season_summary,6,2013.0,avg_inn2,141.48
+Season,season_summary,6,2013.0,sixes_per_match,8.882
+Season,season_summary,6,2013.0,dot_pct,38.352
+Season,season_summary,6,2013.0,franchises,9.0
+Season,season_summary,7,2014.0,matches,60.0
+Season,season_summary,7,2014.0,runs,18909.0
+Season,season_summary,7,2014.0,bowler_wickets,606.0
+Season,season_summary,7,2014.0,player_outs,671.0
+Season,season_summary,7,2014.0,runs_per_match,315.15
+Season,season_summary,7,2014.0,run_rate,8.201
+Season,season_summary,7,2014.0,avg_inn1,163.672
+Season,season_summary,7,2014.0,avg_inn2,154.603
+Season,season_summary,7,2014.0,sixes_per_match,11.9
+Season,season_summary,7,2014.0,dot_pct,36.266
+Season,season_summary,7,2014.0,franchises,8.0
+Season,season_summary,8,2015.0,matches,59.0
+Season,season_summary,8,2015.0,runs,18332.0
+Season,season_summary,8,2015.0,bowler_wickets,624.0
+Season,season_summary,8,2015.0,player_outs,686.0
+Season,season_summary,8,2015.0,runs_per_match,310.712
+Season,season_summary,8,2015.0,run_rate,8.37
+Season,season_summary,8,2015.0,avg_inn1,167.811
+Season,season_summary,8,2015.0,avg_inn2,153.547
+Season,season_summary,8,2015.0,sixes_per_match,11.729
+Season,season_summary,8,2015.0,dot_pct,36.306
+Season,season_summary,8,2015.0,franchises,8.0
+Season,season_summary,9,2016.0,matches,60.0
+Season,season_summary,9,2016.0,runs,18862.0
+Season,season_summary,9,2016.0,bowler_wickets,591.0
+Season,season_summary,9,2016.0,player_outs,665.0
+Season,season_summary,9,2016.0,runs_per_match,314.367
+Season,season_summary,9,2016.0,run_rate,8.31
+Season,season_summary,9,2016.0,avg_inn1,164.339
+Season,season_summary,9,2016.0,avg_inn2,156.25
+Season,season_summary,9,2016.0,sixes_per_match,10.65
+Season,season_summary,9,2016.0,dot_pct,34.139
+Season,season_summary,9,2016.0,franchises,8.0
+Season,season_summary,10,2017.0,matches,59.0
+Season,season_summary,10,2017.0,runs,18769.0
+Season,season_summary,10,2017.0,bowler_wickets,650.0
+Season,season_summary,10,2017.0,player_outs,708.0
+Season,season_summary,10,2017.0,runs_per_match,318.119
+Season,season_summary,10,2017.0,run_rate,8.41
+Season,season_summary,10,2017.0,avg_inn1,166.431
+Season,season_summary,10,2017.0,avg_inn2,154.138
+Season,season_summary,10,2017.0,sixes_per_match,11.949
+Season,season_summary,10,2017.0,dot_pct,33.958
+Season,season_summary,10,2017.0,franchises,8.0
+Season,season_summary,11,2018.0,matches,60.0
+Season,season_summary,11,2018.0,runs,19901.0
+Season,season_summary,11,2018.0,bowler_wickets,662.0
+Season,season_summary,11,2018.0,player_outs,720.0
+Season,season_summary,11,2018.0,runs_per_match,331.683
+Season,season_summary,11,2018.0,run_rate,8.648
+Season,season_summary,11,2018.0,avg_inn1,172.07
+Season,season_summary,11,2018.0,avg_inn2,161.772
+Season,season_summary,11,2018.0,sixes_per_match,14.533
+Season,season_summary,11,2018.0,dot_pct,34.422
+Season,season_summary,11,2018.0,franchises,8.0
+Season,season_summary,12,2019.0,matches,60.0
+Season,season_summary,12,2019.0,runs,19400.0
+Season,season_summary,12,2019.0,bowler_wickets,639.0
+Season,season_summary,12,2019.0,player_outs,681.0
+Season,season_summary,12,2019.0,runs_per_match,323.333
+Season,season_summary,12,2019.0,run_rate,8.412
+Season,season_summary,12,2019.0,avg_inn1,168.508
+Season,season_summary,12,2019.0,avg_inn2,158.559
+Season,season_summary,12,2019.0,sixes_per_match,13.067
+Season,season_summary,12,2019.0,dot_pct,35.641
+Season,season_summary,12,2019.0,franchises,8.0
+Season,season_summary,13,2020.0,matches,60.0
+Season,season_summary,13,2020.0,runs,19352.0
+Season,season_summary,13,2020.0,bowler_wickets,625.0
+Season,season_summary,13,2020.0,player_outs,668.0
+Season,season_summary,13,2020.0,runs_per_match,322.533
+Season,season_summary,13,2020.0,run_rate,8.286
+Season,season_summary,13,2020.0,avg_inn1,169.5
+Season,season_summary,13,2020.0,avg_inn2,153.033
+Season,season_summary,13,2020.0,sixes_per_match,12.25
+Season,season_summary,13,2020.0,dot_pct,34.739
+Season,season_summary,13,2020.0,franchises,8.0
+Season,season_summary,14,2021.0,matches,60.0
+Season,season_summary,14,2021.0,runs,18622.0
+Season,season_summary,14,2021.0,bowler_wickets,670.0
+Season,season_summary,14,2021.0,player_outs,716.0
+Season,season_summary,14,2021.0,runs_per_match,310.367
+Season,season_summary,14,2021.0,run_rate,8.052
+Season,season_summary,14,2021.0,avg_inn1,159.317
+Season,season_summary,14,2021.0,avg_inn2,151.05
+Season,season_summary,14,2021.0,sixes_per_match,11.45
+Season,season_summary,14,2021.0,dot_pct,36.17
+Season,season_summary,14,2021.0,franchises,8.0
+Season,season_summary,15,2022.0,matches,74.0
+Season,season_summary,15,2022.0,runs,24395.0
+Season,season_summary,15,2022.0,bowler_wickets,849.0
+Season,season_summary,15,2022.0,player_outs,911.0
+Season,season_summary,15,2022.0,runs_per_match,329.662
+Season,season_summary,15,2022.0,run_rate,8.539
+Season,season_summary,15,2022.0,avg_inn1,171.122
+Season,season_summary,15,2022.0,avg_inn2,158.541
+Season,season_summary,15,2022.0,sixes_per_match,14.351
+Season,season_summary,15,2022.0,dot_pct,37.075
+Season,season_summary,15,2022.0,franchises,10.0
+Season,season_summary,16,2023.0,matches,74.0
+Season,season_summary,16,2023.0,runs,25688.0
+Season,season_summary,16,2023.0,bowler_wickets,857.0
+Season,season_summary,16,2023.0,player_outs,914.0
+Season,season_summary,16,2023.0,runs_per_match,347.135
+Season,season_summary,16,2023.0,run_rate,8.99
+Season,season_summary,16,2023.0,avg_inn1,182.986
+Season,season_summary,16,2023.0,avg_inn2,166.887
+Season,season_summary,16,2023.0,sixes_per_match,15.189
+Season,season_summary,16,2023.0,dot_pct,33.928
+Season,season_summary,16,2023.0,franchises,10.0
+Season,season_summary,17,2024.0,matches,71.0
+Season,season_summary,17,2024.0,runs,25971.0
+Season,season_summary,17,2024.0,bowler_wickets,830.0
+Season,season_summary,17,2024.0,player_outs,883.0
+Season,season_summary,17,2024.0,runs_per_match,365.789
+Season,season_summary,17,2024.0,run_rate,9.557
+Season,season_summary,17,2024.0,avg_inn1,190.057
+Season,season_summary,17,2024.0,avg_inn2,176.729
+Season,season_summary,17,2024.0,sixes_per_match,17.761
+Season,season_summary,17,2024.0,dot_pct,32.922
+Season,season_summary,17,2024.0,franchises,10.0
+Team,team_summary,1,Mumbai Indians,seasons,17.0
+Team,team_summary,1,Mumbai Indians,matches,261.0
+Team,team_summary,1,Mumbai Indians,wins,144.0
+Team,team_summary,1,Mumbai Indians,losses,117.0
+Team,team_summary,1,Mumbai Indians,win_pct,55.172
+Team,team_summary,1,Mumbai Indians,titles,5.0
+Team,team_summary,1,Mumbai Indians,bat_first_win_pct,53.788
+Team,team_summary,1,Mumbai Indians,chase_win_pct,56.8
+Team,team_summary,2,Chennai Super Kings,seasons,15.0
+Team,team_summary,2,Chennai Super Kings,matches,238.0
+Team,team_summary,2,Chennai Super Kings,wins,138.0
+Team,team_summary,2,Chennai Super Kings,losses,99.0
+Team,team_summary,2,Chennai Super Kings,win_pct,58.228
+Team,team_summary,2,Chennai Super Kings,titles,5.0
+Team,team_summary,2,Chennai Super Kings,bat_first_win_pct,53.846
+Team,team_summary,2,Chennai Super Kings,chase_win_pct,64.151
+Team,team_summary,3,Kolkata Knight Riders,seasons,17.0
+Team,team_summary,3,Kolkata Knight Riders,matches,251.0
+Team,team_summary,3,Kolkata Knight Riders,wins,131.0
+Team,team_summary,3,Kolkata Knight Riders,losses,120.0
+Team,team_summary,3,Kolkata Knight Riders,win_pct,52.191
+Team,team_summary,3,Kolkata Knight Riders,titles,3.0
+Team,team_summary,3,Kolkata Knight Riders,bat_first_win_pct,44.068
+Team,team_summary,3,Kolkata Knight Riders,chase_win_pct,60.465
+Team,team_summary,4,Royal Challengers Bengaluru,seasons,17.0
+Team,team_summary,4,Royal Challengers Bengaluru,matches,255.0
+Team,team_summary,4,Royal Challengers Bengaluru,wins,123.0
+Team,team_summary,4,Royal Challengers Bengaluru,losses,129.0
+Team,team_summary,4,Royal Challengers Bengaluru,win_pct,48.81
+Team,team_summary,4,Royal Challengers Bengaluru,titles,0.0
+Team,team_summary,4,Royal Challengers Bengaluru,bat_first_win_pct,45.238
+Team,team_summary,4,Royal Challengers Bengaluru,chase_win_pct,52.033
+Team,team_summary,5,Delhi Capitals,seasons,17.0
+Team,team_summary,5,Delhi Capitals,matches,252.0
+Team,team_summary,5,Delhi Capitals,wins,115.0
+Team,team_summary,5,Delhi Capitals,losses,135.0
+Team,team_summary,5,Delhi Capitals,win_pct,46.0
+Team,team_summary,5,Delhi Capitals,titles,0.0
+Team,team_summary,5,Delhi Capitals,bat_first_win_pct,42.593
+Team,team_summary,5,Delhi Capitals,chase_win_pct,47.826
+Team,team_summary,6,Punjab Kings,seasons,17.0
+Team,team_summary,6,Punjab Kings,matches,246.0
+Team,team_summary,6,Punjab Kings,wins,112.0
+Team,team_summary,6,Punjab Kings,losses,134.0
+Team,team_summary,6,Punjab Kings,win_pct,45.528
+Team,team_summary,6,Punjab Kings,titles,0.0
+Team,team_summary,6,Punjab Kings,bat_first_win_pct,39.37
+Team,team_summary,6,Punjab Kings,chase_win_pct,51.304
+Team,team_summary,7,Rajasthan Royals,seasons,15.0
+Team,team_summary,7,Rajasthan Royals,matches,221.0
+Team,team_summary,7,Rajasthan Royals,wins,112.0
+Team,team_summary,7,Rajasthan Royals,losses,107.0
+Team,team_summary,7,Rajasthan Royals,win_pct,51.142
+Team,team_summary,7,Rajasthan Royals,titles,1.0
+Team,team_summary,7,Rajasthan Royals,bat_first_win_pct,43.0
+Team,team_summary,7,Rajasthan Royals,chase_win_pct,57.759
+Team,team_summary,8,Sunrisers Hyderabad,seasons,12.0
+Team,team_summary,8,Sunrisers Hyderabad,matches,182.0
+Team,team_summary,8,Sunrisers Hyderabad,wins,88.0
+Team,team_summary,8,Sunrisers Hyderabad,losses,94.0
+Team,team_summary,8,Sunrisers Hyderabad,win_pct,48.352
+Team,team_summary,8,Sunrisers Hyderabad,titles,1.0
+Team,team_summary,8,Sunrisers Hyderabad,bat_first_win_pct,46.809
+Team,team_summary,8,Sunrisers Hyderabad,chase_win_pct,51.19
+Team,team_summary,9,Deccan Chargers,seasons,5.0
+Team,team_summary,9,Deccan Chargers,matches,75.0
+Team,team_summary,9,Deccan Chargers,wins,29.0
+Team,team_summary,9,Deccan Chargers,losses,46.0
+Team,team_summary,9,Deccan Chargers,win_pct,38.667
+Team,team_summary,9,Deccan Chargers,titles,1.0
+Team,team_summary,9,Deccan Chargers,bat_first_win_pct,41.86
+Team,team_summary,9,Deccan Chargers,chase_win_pct,34.375
+Team,team_summary,10,Gujarat Titans,seasons,3.0
+Team,team_summary,10,Gujarat Titans,matches,45.0
+Team,team_summary,10,Gujarat Titans,wins,28.0
+Team,team_summary,10,Gujarat Titans,losses,17.0
+Team,team_summary,10,Gujarat Titans,win_pct,62.222
+Team,team_summary,10,Gujarat Titans,titles,1.0
+Team,team_summary,10,Gujarat Titans,bat_first_win_pct,52.381
+Team,team_summary,10,Gujarat Titans,chase_win_pct,70.833
+Team,team_summary,11,Lucknow Super Giants,seasons,3.0
+Team,team_summary,11,Lucknow Super Giants,matches,44.0
+Team,team_summary,11,Lucknow Super Giants,wins,24.0
+Team,team_summary,11,Lucknow Super Giants,losses,19.0
+Team,team_summary,11,Lucknow Super Giants,win_pct,55.814
+Team,team_summary,11,Lucknow Super Giants,titles,0.0
+Team,team_summary,11,Lucknow Super Giants,bat_first_win_pct,72.727
+Team,team_summary,11,Lucknow Super Giants,chase_win_pct,38.095
+Team,team_summary,12,Rising Pune Supergiants,seasons,2.0
+Team,team_summary,12,Rising Pune Supergiants,matches,30.0
+Team,team_summary,12,Rising Pune Supergiants,wins,15.0
+Team,team_summary,12,Rising Pune Supergiants,losses,15.0
+Team,team_summary,12,Rising Pune Supergiants,win_pct,50.0
+Team,team_summary,12,Rising Pune Supergiants,titles,0.0
+Team,team_summary,12,Rising Pune Supergiants,bat_first_win_pct,33.333
+Team,team_summary,12,Rising Pune Supergiants,chase_win_pct,66.667
+Team,team_summary,13,Gujarat Lions,seasons,2.0
+Team,team_summary,13,Gujarat Lions,matches,30.0
+Team,team_summary,13,Gujarat Lions,wins,13.0
+Team,team_summary,13,Gujarat Lions,losses,17.0
+Team,team_summary,13,Gujarat Lions,win_pct,43.333
+Team,team_summary,13,Gujarat Lions,titles,0.0
+Team,team_summary,13,Gujarat Lions,bat_first_win_pct,7.692
+Team,team_summary,13,Gujarat Lions,chase_win_pct,75.0
+Team,team_summary,14,Pune Warriors,seasons,3.0
+Team,team_summary,14,Pune Warriors,matches,46.0
+Team,team_summary,14,Pune Warriors,wins,12.0
+Team,team_summary,14,Pune Warriors,losses,33.0
+Team,team_summary,14,Pune Warriors,win_pct,26.667
+Team,team_summary,14,Pune Warriors,titles,0.0
+Team,team_summary,14,Pune Warriors,bat_first_win_pct,30.0
+Team,team_summary,14,Pune Warriors,chase_win_pct,24.0
+Team,team_summary,15,Kochi Tuskers Kerala,seasons,1.0
+Team,team_summary,15,Kochi Tuskers Kerala,matches,14.0
+Team,team_summary,15,Kochi Tuskers Kerala,wins,6.0
+Team,team_summary,15,Kochi Tuskers Kerala,losses,8.0
+Team,team_summary,15,Kochi Tuskers Kerala,win_pct,42.857
+Team,team_summary,15,Kochi Tuskers Kerala,titles,0.0
+Team,team_summary,15,Kochi Tuskers Kerala,bat_first_win_pct,28.571
+Team,team_summary,15,Kochi Tuskers Kerala,chase_win_pct,57.143
+Team,team_bowling_era_adjusted,1,Rising Pune Supergiants,economy,7.98
+Team,team_bowling_era_adjusted,1,Rising Pune Supergiants,economy_vs_league,-0.38
+Team,team_bowling_era_adjusted,1,Rising Pune Supergiants,balls_per_dismissal,18.1
+Team,team_bowling_era_adjusted,2,Gujarat Titans,economy,8.73
+Team,team_bowling_era_adjusted,2,Gujarat Titans,economy_vs_league,-0.25
+Team,team_bowling_era_adjusted,2,Gujarat Titans,balls_per_dismissal,17.31
+Team,team_bowling_era_adjusted,3,Chennai Super Kings,economy,8.11
+Team,team_bowling_era_adjusted,3,Chennai Super Kings,economy_vs_league,-0.16
+Team,team_bowling_era_adjusted,3,Chennai Super Kings,balls_per_dismissal,18.61
+Team,team_bowling_era_adjusted,4,Sunrisers Hyderabad,economy,8.3
+Team,team_bowling_era_adjusted,4,Sunrisers Hyderabad,economy_vs_league,-0.15
+Team,team_bowling_era_adjusted,4,Sunrisers Hyderabad,balls_per_dismissal,19.58
+Team,team_bowling_era_adjusted,5,Lucknow Super Giants,economy,8.88
+Team,team_bowling_era_adjusted,5,Lucknow Super Giants,economy_vs_league,-0.13
+Team,team_bowling_era_adjusted,5,Lucknow Super Giants,balls_per_dismissal,18.97
+Team,team_bowling_era_adjusted,6,Kolkata Knight Riders,economy,8.17
+Team,team_bowling_era_adjusted,6,Kolkata Knight Riders,economy_vs_league,-0.1
+Team,team_bowling_era_adjusted,6,Kolkata Knight Riders,balls_per_dismissal,19.62
+Team,team_bowling_era_adjusted,7,Mumbai Indians,economy,8.18
+Team,team_bowling_era_adjusted,7,Mumbai Indians,economy_vs_league,-0.1
+Team,team_bowling_era_adjusted,7,Mumbai Indians,balls_per_dismissal,19.08
+Team,team_bowling_era_adjusted,8,Kochi Tuskers Kerala,economy,7.66
+Team,team_bowling_era_adjusted,8,Kochi Tuskers Kerala,economy_vs_league,-0.06
+Team,team_bowling_era_adjusted,8,Kochi Tuskers Kerala,balls_per_dismissal,21.01
+Team,team_bowling_era_adjusted,9,Pune Warriors,economy,7.75
+Team,team_bowling_era_adjusted,9,Pune Warriors,economy_vs_league,0.0
+Team,team_bowling_era_adjusted,9,Pune Warriors,balls_per_dismissal,22.32
+Team,team_bowling_era_adjusted,10,Rajasthan Royals,economy,8.3
+Team,team_bowling_era_adjusted,10,Rajasthan Royals,economy_vs_league,0.02
+Team,team_bowling_era_adjusted,10,Rajasthan Royals,balls_per_dismissal,19.99
+Team,team_bowling_era_adjusted,11,Delhi Capitals,economy,8.34
+Team,team_bowling_era_adjusted,11,Delhi Capitals,economy_vs_league,0.06
+Team,team_bowling_era_adjusted,11,Delhi Capitals,balls_per_dismissal,19.31
+Team,team_bowling_era_adjusted,12,Deccan Chargers,economy,8.0
+Team,team_bowling_era_adjusted,12,Deccan Chargers,economy_vs_league,0.12
+Team,team_bowling_era_adjusted,12,Deccan Chargers,balls_per_dismissal,19.53
+Team,team_bowling_era_adjusted,13,Royal Challengers Bengaluru,economy,8.44
+Team,team_bowling_era_adjusted,13,Royal Challengers Bengaluru,economy_vs_league,0.17
+Team,team_bowling_era_adjusted,13,Royal Challengers Bengaluru,balls_per_dismissal,19.48
+Team,team_bowling_era_adjusted,14,Punjab Kings,economy,8.53
+Team,team_bowling_era_adjusted,14,Punjab Kings,economy_vs_league,0.25
+Team,team_bowling_era_adjusted,14,Punjab Kings,balls_per_dismissal,20.03
+Team,team_bowling_era_adjusted,15,Gujarat Lions,economy,8.85
+Team,team_bowling_era_adjusted,15,Gujarat Lions,economy_vs_league,0.5
+Team,team_bowling_era_adjusted,15,Gujarat Lions,balls_per_dismissal,23.1
+Batting,top_run_scorers,1,V Kohli,runs,8004.0
+Batting,top_run_scorers,1,V Kohli,innings,244.0
+Batting,top_run_scorers,1,V Kohli,average,38.67
+Batting,top_run_scorers,1,V Kohli,strike_rate,131.97
+Batting,top_run_scorers,2,S Dhawan,runs,6769.0
+Batting,top_run_scorers,2,S Dhawan,innings,221.0
+Batting,top_run_scorers,2,S Dhawan,average,35.26
+Batting,top_run_scorers,2,S Dhawan,strike_rate,127.14
+Batting,top_run_scorers,3,RG Sharma,runs,6628.0
+Batting,top_run_scorers,3,RG Sharma,innings,252.0
+Batting,top_run_scorers,3,RG Sharma,average,29.72
+Batting,top_run_scorers,3,RG Sharma,strike_rate,131.14
+Batting,top_run_scorers,4,DA Warner,runs,6565.0
+Batting,top_run_scorers,4,DA Warner,innings,184.0
+Batting,top_run_scorers,4,DA Warner,average,40.52
+Batting,top_run_scorers,4,DA Warner,strike_rate,139.77
+Batting,top_run_scorers,5,SK Raina,runs,5528.0
+Batting,top_run_scorers,5,SK Raina,innings,200.0
+Batting,top_run_scorers,5,SK Raina,average,32.52
+Batting,top_run_scorers,5,SK Raina,strike_rate,136.73
+Batting,top_run_scorers,6,MS Dhoni,runs,5243.0
+Batting,top_run_scorers,6,MS Dhoni,innings,229.0
+Batting,top_run_scorers,6,MS Dhoni,average,39.13
+Batting,top_run_scorers,6,MS Dhoni,strike_rate,137.54
+Batting,top_run_scorers,7,AB de Villiers,runs,5162.0
+Batting,top_run_scorers,7,AB de Villiers,innings,170.0
+Batting,top_run_scorers,7,AB de Villiers,average,39.71
+Batting,top_run_scorers,7,AB de Villiers,strike_rate,151.69
+Batting,top_run_scorers,8,CH Gayle,runs,4965.0
+Batting,top_run_scorers,8,CH Gayle,innings,141.0
+Batting,top_run_scorers,8,CH Gayle,average,39.72
+Batting,top_run_scorers,8,CH Gayle,strike_rate,148.96
+Batting,top_run_scorers,9,RV Uthappa,runs,4952.0
+Batting,top_run_scorers,9,RV Uthappa,innings,197.0
+Batting,top_run_scorers,9,RV Uthappa,average,27.51
+Batting,top_run_scorers,9,RV Uthappa,strike_rate,130.35
+Batting,top_run_scorers,10,KD Karthik,runs,4842.0
+Batting,top_run_scorers,10,KD Karthik,innings,234.0
+Batting,top_run_scorers,10,KD Karthik,average,26.32
+Batting,top_run_scorers,10,KD Karthik,strike_rate,135.36
+Batting,top_run_scorers,11,KL Rahul,runs,4683.0
+Batting,top_run_scorers,11,KL Rahul,innings,123.0
+Batting,top_run_scorers,11,KL Rahul,average,45.47
+Batting,top_run_scorers,11,KL Rahul,strike_rate,134.61
+Batting,top_run_scorers,12,AM Rahane,runs,4642.0
+Batting,top_run_scorers,12,AM Rahane,innings,171.0
+Batting,top_run_scorers,12,AM Rahane,average,30.14
+Batting,top_run_scorers,12,AM Rahane,strike_rate,123.42
+Batting,top_run_scorers,13,F du Plessis,runs,4571.0
+Batting,top_run_scorers,13,F du Plessis,innings,138.0
+Batting,top_run_scorers,13,F du Plessis,average,35.99
+Batting,top_run_scorers,13,F du Plessis,strike_rate,136.37
+Batting,top_run_scorers,14,SV Samson,runs,4419.0
+Batting,top_run_scorers,14,SV Samson,innings,163.0
+Batting,top_run_scorers,14,SV Samson,average,30.69
+Batting,top_run_scorers,14,SV Samson,strike_rate,138.96
+Batting,top_run_scorers,15,AT Rayudu,runs,4348.0
+Batting,top_run_scorers,15,AT Rayudu,innings,187.0
+Batting,top_run_scorers,15,AT Rayudu,average,28.23
+Batting,top_run_scorers,15,AT Rayudu,strike_rate,127.54
+Batting,best_average_min50inn,1,KL Rahul,average,45.47
+Batting,best_average_min50inn,1,KL Rahul,innings,123.0
+Batting,best_average_min50inn,1,KL Rahul,runs,4683.0
+Batting,best_average_min50inn,2,RD Gaikwad,average,41.75
+Batting,best_average_min50inn,2,RD Gaikwad,innings,65.0
+Batting,best_average_min50inn,2,RD Gaikwad,runs,2380.0
+Batting,best_average_min50inn,3,DA Warner,average,40.52
+Batting,best_average_min50inn,3,DA Warner,innings,184.0
+Batting,best_average_min50inn,3,DA Warner,runs,6565.0
+Batting,best_average_min50inn,4,SE Marsh,average,39.95
+Batting,best_average_min50inn,4,SE Marsh,innings,69.0
+Batting,best_average_min50inn,4,SE Marsh,runs,2477.0
+Batting,best_average_min50inn,5,JP Duminy,average,39.78
+Batting,best_average_min50inn,5,JP Duminy,innings,77.0
+Batting,best_average_min50inn,5,JP Duminy,runs,2029.0
+Batting,best_average_min50inn,6,CH Gayle,average,39.72
+Batting,best_average_min50inn,6,CH Gayle,innings,141.0
+Batting,best_average_min50inn,6,CH Gayle,runs,4965.0
+Batting,best_average_min50inn,7,AB de Villiers,average,39.71
+Batting,best_average_min50inn,7,AB de Villiers,innings,170.0
+Batting,best_average_min50inn,7,AB de Villiers,runs,5162.0
+Batting,best_average_min50inn,8,MS Dhoni,average,39.13
+Batting,best_average_min50inn,8,MS Dhoni,innings,229.0
+Batting,best_average_min50inn,8,MS Dhoni,runs,5243.0
+Batting,best_average_min50inn,9,MEK Hussey,average,38.76
+Batting,best_average_min50inn,9,MEK Hussey,innings,58.0
+Batting,best_average_min50inn,9,MEK Hussey,runs,1977.0
+Batting,best_average_min50inn,10,V Kohli,average,38.67
+Batting,best_average_min50inn,10,V Kohli,innings,244.0
+Batting,best_average_min50inn,10,V Kohli,runs,8004.0
+Batting,best_average_min50inn,11,JC Buttler,average,38.11
+Batting,best_average_min50inn,11,JC Buttler,innings,106.0
+Batting,best_average_min50inn,11,JC Buttler,runs,3582.0
+Batting,best_average_min50inn,12,Shubman Gill,average,37.84
+Batting,best_average_min50inn,12,Shubman Gill,innings,100.0
+Batting,best_average_min50inn,12,Shubman Gill,runs,3216.0
+Batting,best_average_min50inn,13,DA Miller,average,36.1
+Batting,best_average_min50inn,13,DA Miller,innings,124.0
+Batting,best_average_min50inn,13,DA Miller,runs,2924.0
+Batting,best_average_min50inn,14,F du Plessis,average,35.99
+Batting,best_average_min50inn,14,F du Plessis,innings,138.0
+Batting,best_average_min50inn,14,F du Plessis,runs,4571.0
+Batting,best_average_min50inn,15,KS Williamson,average,35.47
+Batting,best_average_min50inn,15,KS Williamson,innings,77.0
+Batting,best_average_min50inn,15,KS Williamson,runs,2128.0
+Batting,best_strike_rate_min500balls,1,AD Russell,strike_rate,174.93
+Batting,best_strike_rate_min500balls,1,AD Russell,balls,1420.0
+Batting,best_strike_rate_min500balls,1,AD Russell,runs,2484.0
+Batting,best_strike_rate_min500balls,2,H Klaasen,strike_rate,168.31
+Batting,best_strike_rate_min500balls,2,H Klaasen,balls,590.0
+Batting,best_strike_rate_min500balls,2,H Klaasen,runs,993.0
+Batting,best_strike_rate_min500balls,3,SP Narine,strike_rate,165.84
+Batting,best_strike_rate_min500balls,3,SP Narine,balls,925.0
+Batting,best_strike_rate_min500balls,3,SP Narine,runs,1534.0
+Batting,best_strike_rate_min500balls,4,LS Livingstone,strike_rate,162.46
+Batting,best_strike_rate_min500balls,4,LS Livingstone,balls,578.0
+Batting,best_strike_rate_min500balls,4,LS Livingstone,runs,939.0
+Batting,best_strike_rate_min500balls,5,N Pooran,strike_rate,162.29
+Batting,best_strike_rate_min500balls,5,N Pooran,balls,1090.0
+Batting,best_strike_rate_min500balls,5,N Pooran,runs,1769.0
+Batting,best_strike_rate_min500balls,6,RM Patidar,strike_rate,158.85
+Batting,best_strike_rate_min500balls,6,RM Patidar,balls,503.0
+Batting,best_strike_rate_min500balls,6,RM Patidar,runs,799.0
+Batting,best_strike_rate_min500balls,7,GJ Maxwell,strike_rate,156.73
+Batting,best_strike_rate_min500balls,7,GJ Maxwell,balls,1768.0
+Batting,best_strike_rate_min500balls,7,GJ Maxwell,runs,2771.0
+Batting,best_strike_rate_min500balls,8,V Sehwag,strike_rate,155.44
+Batting,best_strike_rate_min500balls,8,V Sehwag,balls,1755.0
+Batting,best_strike_rate_min500balls,8,V Sehwag,runs,2728.0
+Batting,best_strike_rate_min500balls,9,Abhishek Sharma,strike_rate,155.24
+Batting,best_strike_rate_min500balls,9,Abhishek Sharma,balls,887.0
+Batting,best_strike_rate_min500balls,9,Abhishek Sharma,runs,1377.0
+Batting,best_strike_rate_min500balls,10,SO Hetmyer,strike_rate,153.08
+Batting,best_strike_rate_min500balls,10,SO Hetmyer,balls,812.0
+Batting,best_strike_rate_min500balls,10,SO Hetmyer,runs,1243.0
+Batting,best_strike_rate_min500balls,11,AB de Villiers,strike_rate,151.69
+Batting,best_strike_rate_min500balls,11,AB de Villiers,balls,3403.0
+Batting,best_strike_rate_min500balls,11,AB de Villiers,runs,5162.0
+Batting,best_strike_rate_min500balls,12,YBK Jaiswal,strike_rate,150.61
+Batting,best_strike_rate_min500balls,12,YBK Jaiswal,balls,1067.0
+Batting,best_strike_rate_min500balls,12,YBK Jaiswal,runs,1607.0
+Batting,best_strike_rate_min500balls,13,CH Gayle,strike_rate,148.96
+Batting,best_strike_rate_min500balls,13,CH Gayle,balls,3333.0
+Batting,best_strike_rate_min500balls,13,CH Gayle,runs,4965.0
+Batting,best_strike_rate_min500balls,14,RR Pant,strike_rate,148.93
+Batting,best_strike_rate_min500balls,14,RR Pant,balls,2205.0
+Batting,best_strike_rate_min500balls,14,RR Pant,runs,3284.0
+Batting,best_strike_rate_min500balls,15,JC Buttler,strike_rate,147.53
+Batting,best_strike_rate_min500balls,15,JC Buttler,balls,2428.0
+Batting,best_strike_rate_min500balls,15,JC Buttler,runs,3582.0
+Batting,most_sixes,1,CH Gayle,sixes,357.0
+Batting,most_sixes,1,CH Gayle,fours,405.0
+Batting,most_sixes,2,RG Sharma,sixes,281.0
+Batting,most_sixes,2,RG Sharma,fours,599.0
+Batting,most_sixes,3,V Kohli,sixes,273.0
+Batting,most_sixes,3,V Kohli,fours,706.0
+Batting,most_sixes,4,MS Dhoni,sixes,252.0
+Batting,most_sixes,4,MS Dhoni,fours,363.0
+Batting,most_sixes,5,AB de Villiers,sixes,251.0
+Batting,most_sixes,5,AB de Villiers,fours,413.0
+Batting,most_sixes,6,DA Warner,sixes,236.0
+Batting,most_sixes,6,DA Warner,fours,663.0
+Batting,most_sixes,7,KA Pollard,sixes,223.0
+Batting,most_sixes,7,KA Pollard,fours,218.0
+Batting,most_sixes,8,AD Russell,sixes,209.0
+Batting,most_sixes,8,AD Russell,fours,170.0
+Batting,most_sixes,9,SV Samson,sixes,206.0
+Batting,most_sixes,9,SV Samson,fours,352.0
+Batting,most_sixes,10,SK Raina,sixes,203.0
+Batting,most_sixes,10,SK Raina,fours,506.0
+Batting,most_sixes,11,SR Watson,sixes,190.0
+Batting,most_sixes,11,SR Watson,fours,376.0
+Batting,most_sixes,12,KL Rahul,sixes,187.0
+Batting,most_sixes,12,KL Rahul,fours,400.0
+Batting,most_sixes,13,RV Uthappa,sixes,182.0
+Batting,most_sixes,13,RV Uthappa,fours,481.0
+Batting,most_sixes,14,AT Rayudu,sixes,173.0
+Batting,most_sixes,14,AT Rayudu,fours,359.0
+Batting,most_sixes,15,F du Plessis,sixes,166.0
+Batting,most_sixes,15,F du Plessis,fours,422.0
+Bowling,top_wicket_takers,1,YS Chahal,wickets,205.0
+Bowling,top_wicket_takers,1,YS Chahal,economy,7.84
+Bowling,top_wicket_takers,1,YS Chahal,average,22.45
+Bowling,top_wicket_takers,1,YS Chahal,strike_rate,17.18
+Bowling,top_wicket_takers,2,PP Chawla,wickets,192.0
+Bowling,top_wicket_takers,2,PP Chawla,economy,7.96
+Bowling,top_wicket_takers,2,PP Chawla,average,26.6
+Bowling,top_wicket_takers,2,PP Chawla,strike_rate,20.05
+Bowling,top_wicket_takers,3,DJ Bravo,wickets,183.0
+Bowling,top_wicket_takers,3,DJ Bravo,economy,8.38
+Bowling,top_wicket_takers,3,DJ Bravo,average,23.83
+Bowling,top_wicket_takers,3,DJ Bravo,strike_rate,17.05
+Bowling,top_wicket_takers,4,B Kumar,wickets,181.0
+Bowling,top_wicket_takers,4,B Kumar,economy,7.56
+Bowling,top_wicket_takers,4,B Kumar,average,27.23
+Bowling,top_wicket_takers,4,B Kumar,strike_rate,21.6
+Bowling,top_wicket_takers,5,R Ashwin,wickets,180.0
+Bowling,top_wicket_takers,5,R Ashwin,economy,7.12
+Bowling,top_wicket_takers,5,R Ashwin,average,29.83
+Bowling,top_wicket_takers,5,R Ashwin,strike_rate,25.13
+Bowling,top_wicket_takers,6,SP Narine,wickets,180.0
+Bowling,top_wicket_takers,6,SP Narine,economy,6.73
+Bowling,top_wicket_takers,6,SP Narine,average,25.39
+Bowling,top_wicket_takers,6,SP Narine,strike_rate,22.64
+Bowling,top_wicket_takers,7,A Mishra,wickets,174.0
+Bowling,top_wicket_takers,7,A Mishra,economy,7.38
+Bowling,top_wicket_takers,7,A Mishra,average,23.82
+Bowling,top_wicket_takers,7,A Mishra,strike_rate,19.37
+Bowling,top_wicket_takers,8,SL Malinga,wickets,170.0
+Bowling,top_wicket_takers,8,SL Malinga,economy,7.14
+Bowling,top_wicket_takers,8,SL Malinga,average,19.79
+Bowling,top_wicket_takers,8,SL Malinga,strike_rate,16.64
+Bowling,top_wicket_takers,9,JJ Bumrah,wickets,165.0
+Bowling,top_wicket_takers,9,JJ Bumrah,economy,7.3
+Bowling,top_wicket_takers,9,JJ Bumrah,average,22.52
+Bowling,top_wicket_takers,9,JJ Bumrah,strike_rate,18.5
+Bowling,top_wicket_takers,10,RA Jadeja,wickets,160.0
+Bowling,top_wicket_takers,10,RA Jadeja,economy,7.62
+Bowling,top_wicket_takers,10,RA Jadeja,average,30.4
+Bowling,top_wicket_takers,10,RA Jadeja,strike_rate,23.93
+Bowling,top_wicket_takers,11,Harbhajan Singh,wickets,150.0
+Bowling,top_wicket_takers,11,Harbhajan Singh,economy,7.08
+Bowling,top_wicket_takers,11,Harbhajan Singh,average,26.87
+Bowling,top_wicket_takers,11,Harbhajan Singh,strike_rate,22.77
+Bowling,top_wicket_takers,12,Rashid Khan,wickets,149.0
+Bowling,top_wicket_takers,12,Rashid Khan,economy,6.82
+Bowling,top_wicket_takers,12,Rashid Khan,average,21.83
+Bowling,top_wicket_takers,12,Rashid Khan,strike_rate,19.19
+Bowling,top_wicket_takers,13,UT Yadav,wickets,144.0
+Bowling,top_wicket_takers,13,UT Yadav,economy,8.49
+Bowling,top_wicket_takers,13,UT Yadav,average,29.97
+Bowling,top_wicket_takers,13,UT Yadav,strike_rate,21.19
+Bowling,top_wicket_takers,14,Sandeep Sharma,wickets,137.0
+Bowling,top_wicket_takers,14,Sandeep Sharma,economy,7.89
+Bowling,top_wicket_takers,14,Sandeep Sharma,average,27.07
+Bowling,top_wicket_takers,14,Sandeep Sharma,strike_rate,20.6
+Bowling,top_wicket_takers,15,HV Patel,wickets,135.0
+Bowling,top_wicket_takers,15,HV Patel,economy,8.74
+Bowling,top_wicket_takers,15,HV Patel,average,23.32
+Bowling,top_wicket_takers,15,HV Patel,strike_rate,16.01
+Bowling,best_economy_min1000balls,1,M Muralitharan,economy,6.68
+Bowling,best_economy_min1000balls,1,M Muralitharan,legal_balls,1524.0
+Bowling,best_economy_min1000balls,1,M Muralitharan,wickets,63.0
+Bowling,best_economy_min1000balls,2,SP Narine,economy,6.73
+Bowling,best_economy_min1000balls,2,SP Narine,legal_balls,4075.0
+Bowling,best_economy_min1000balls,2,SP Narine,wickets,180.0
+Bowling,best_economy_min1000balls,3,Rashid Khan,economy,6.82
+Bowling,best_economy_min1000balls,3,Rashid Khan,legal_balls,2859.0
+Bowling,best_economy_min1000balls,3,Rashid Khan,wickets,149.0
+Bowling,best_economy_min1000balls,4,DW Steyn,economy,6.92
+Bowling,best_economy_min1000balls,4,DW Steyn,legal_balls,2176.0
+Bowling,best_economy_min1000balls,4,DW Steyn,wickets,97.0
+Bowling,best_economy_min1000balls,5,Harbhajan Singh,economy,7.08
+Bowling,best_economy_min1000balls,5,Harbhajan Singh,legal_balls,3416.0
+Bowling,best_economy_min1000balls,5,Harbhajan Singh,wickets,150.0
+Bowling,best_economy_min1000balls,6,R Ashwin,economy,7.12
+Bowling,best_economy_min1000balls,6,R Ashwin,legal_balls,4524.0
+Bowling,best_economy_min1000balls,6,R Ashwin,wickets,180.0
+Bowling,best_economy_min1000balls,7,SL Malinga,economy,7.14
+Bowling,best_economy_min1000balls,7,SL Malinga,legal_balls,2828.0
+Bowling,best_economy_min1000balls,7,SL Malinga,wickets,170.0
+Bowling,best_economy_min1000balls,8,M Kartik,economy,7.25
+Bowling,best_economy_min1000balls,8,M Kartik,legal_balls,1149.0
+Bowling,best_economy_min1000balls,8,M Kartik,wickets,31.0
+Bowling,best_economy_min1000balls,9,SK Warne,economy,7.27
+Bowling,best_economy_min1000balls,9,SK Warne,legal_balls,1194.0
+Bowling,best_economy_min1000balls,9,SK Warne,wickets,57.0
+Bowling,best_economy_min1000balls,10,AR Patel,economy,7.28
+Bowling,best_economy_min1000balls,10,AR Patel,legal_balls,3099.0
+Bowling,best_economy_min1000balls,10,AR Patel,wickets,123.0
+Bowling,best_economy_min1000balls,11,JJ Bumrah,economy,7.3
+Bowling,best_economy_min1000balls,11,JJ Bumrah,legal_balls,3053.0
+Bowling,best_economy_min1000balls,11,JJ Bumrah,wickets,165.0
+Bowling,best_economy_min1000balls,12,PP Ojha,economy,7.37
+Bowling,best_economy_min1000balls,12,PP Ojha,legal_balls,1899.0
+Bowling,best_economy_min1000balls,12,PP Ojha,wickets,89.0
+Bowling,best_economy_min1000balls,13,KH Pandya,economy,7.37
+Bowling,best_economy_min1000balls,13,KH Pandya,legal_balls,2122.0
+Bowling,best_economy_min1000balls,13,KH Pandya,wickets,76.0
+Bowling,best_economy_min1000balls,14,A Mishra,economy,7.38
+Bowling,best_economy_min1000balls,14,A Mishra,legal_balls,3371.0
+Bowling,best_economy_min1000balls,14,A Mishra,wickets,174.0
+Bowling,best_economy_min1000balls,15,YK Pathan,economy,7.4
+Bowling,best_economy_min1000balls,15,YK Pathan,legal_balls,1147.0
+Bowling,best_economy_min1000balls,15,YK Pathan,wickets,42.0
+Bowling,best_average_min1000balls,1,SL Malinga,average,19.79
+Bowling,best_average_min1000balls,1,SL Malinga,strike_rate,16.64
+Bowling,best_average_min1000balls,1,SL Malinga,wickets,170.0
+Bowling,best_average_min1000balls,2,Imran Tahir,average,20.77
+Bowling,best_average_min1000balls,2,Imran Tahir,strike_rate,16.05
+Bowling,best_average_min1000balls,2,Imran Tahir,wickets,82.0
+Bowling,best_average_min1000balls,3,Rashid Khan,average,21.83
+Bowling,best_average_min1000balls,3,Rashid Khan,strike_rate,19.19
+Bowling,best_average_min1000balls,3,Rashid Khan,wickets,149.0
+Bowling,best_average_min1000balls,4,K Rabada,average,21.95
+Bowling,best_average_min1000balls,4,K Rabada,strike_rate,15.56
+Bowling,best_average_min1000balls,4,K Rabada,wickets,117.0
+Bowling,best_average_min1000balls,5,YS Chahal,average,22.45
+Bowling,best_average_min1000balls,5,YS Chahal,strike_rate,17.18
+Bowling,best_average_min1000balls,5,YS Chahal,wickets,205.0
+Bowling,best_average_min1000balls,6,JJ Bumrah,average,22.52
+Bowling,best_average_min1000balls,6,JJ Bumrah,strike_rate,18.5
+Bowling,best_average_min1000balls,6,JJ Bumrah,wickets,165.0
+Bowling,best_average_min1000balls,7,MM Patel,average,22.95
+Bowling,best_average_min1000balls,7,MM Patel,strike_rate,18.31
+Bowling,best_average_min1000balls,7,MM Patel,wickets,74.0
+Bowling,best_average_min1000balls,8,AD Russell,average,23.01
+Bowling,best_average_min1000balls,8,AD Russell,strike_rate,14.76
+Bowling,best_average_min1000balls,8,AD Russell,wickets,115.0
+Bowling,best_average_min1000balls,9,HV Patel,average,23.32
+Bowling,best_average_min1000balls,9,HV Patel,strike_rate,16.01
+Bowling,best_average_min1000balls,9,HV Patel,wickets,135.0
+Bowling,best_average_min1000balls,10,A Nehra,average,23.54
+Bowling,best_average_min1000balls,10,A Nehra,strike_rate,18.0
+Bowling,best_average_min1000balls,10,A Nehra,wickets,106.0
+Bowling,best_average_min1000balls,11,A Mishra,average,23.82
+Bowling,best_average_min1000balls,11,A Mishra,strike_rate,19.37
+Bowling,best_average_min1000balls,11,A Mishra,wickets,174.0
+Bowling,best_average_min1000balls,12,DJ Bravo,average,23.83
+Bowling,best_average_min1000balls,12,DJ Bravo,strike_rate,17.05
+Bowling,best_average_min1000balls,12,DJ Bravo,wickets,183.0
+Bowling,best_average_min1000balls,13,CV Varun,average,24.1
+Bowling,best_average_min1000balls,13,CV Varun,strike_rate,19.16
+Bowling,best_average_min1000balls,13,CV Varun,wickets,83.0
+Bowling,best_average_min1000balls,14,CH Morris,average,24.16
+Bowling,best_average_min1000balls,14,CH Morris,strike_rate,18.11
+Bowling,best_average_min1000balls,14,CH Morris,wickets,95.0
+Bowling,best_average_min1000balls,15,MM Sharma,average,24.67
+Bowling,best_average_min1000balls,15,MM Sharma,strike_rate,17.07
+Bowling,best_average_min1000balls,15,MM Sharma,wickets,132.0
+Venue,venue_first_innings_min20,1,Brabourne Stadium,avg_inn1,178.5
+Venue,venue_first_innings_min20,1,Brabourne Stadium,avg_inn1_vs_season,9.7
+Venue,venue_first_innings_min20,1,Brabourne Stadium,full_matches,27.0
+Venue,venue_first_innings_min20,2,M Chinnaswamy Stadium,avg_inn1,177.2
+Venue,venue_first_innings_min20,2,M Chinnaswamy Stadium,avg_inn1_vs_season,9.8
+Venue,venue_first_innings_min20,2,M Chinnaswamy Stadium,full_matches,85.0
+Venue,venue_first_innings_min20,3,Arun Jaitley Stadium,avg_inn1,171.2
+Venue,venue_first_innings_min20,3,Arun Jaitley Stadium,avg_inn1_vs_season,4.8
+Venue,venue_first_innings_min20,3,Arun Jaitley Stadium,full_matches,86.0
+Venue,venue_first_innings_min20,4,Narendra Modi Stadium,avg_inn1,170.3
+Venue,venue_first_innings_min20,4,Narendra Modi Stadium,avg_inn1_vs_season,-4.2
+Venue,venue_first_innings_min20,4,Narendra Modi Stadium,full_matches,35.0
+Venue,venue_first_innings_min20,5,Wankhede Stadium,avg_inn1,170.3
+Venue,venue_first_innings_min20,5,Wankhede Stadium,avg_inn1_vs_season,3.0
+Venue,venue_first_innings_min20,5,Wankhede Stadium,full_matches,118.0
+Venue,venue_first_innings_min20,6,Punjab Cricket Association IS Bindra Stadium,avg_inn1,168.9
+Venue,venue_first_innings_min20,6,Punjab Cricket Association IS Bindra Stadium,avg_inn1_vs_season,4.3
+Venue,venue_first_innings_min20,6,Punjab Cricket Association IS Bindra Stadium,full_matches,59.0
+Venue,venue_first_innings_min20,7,Eden Gardens,avg_inn1,168.9
+Venue,venue_first_innings_min20,7,Eden Gardens,avg_inn1_vs_season,1.4
+Venue,venue_first_innings_min20,7,Eden Gardens,full_matches,86.0
+Venue,venue_first_innings_min20,8,MA Chidambaram Stadium,avg_inn1,163.9
+Venue,venue_first_innings_min20,8,MA Chidambaram Stadium,avg_inn1_vs_season,-2.9
+Venue,venue_first_innings_min20,8,MA Chidambaram Stadium,full_matches,85.0
+Venue,venue_first_innings_min20,9,Rajiv Gandhi International Stadium,avg_inn1,163.8
+Venue,venue_first_innings_min20,9,Rajiv Gandhi International Stadium,avg_inn1_vs_season,-3.8
+Venue,venue_first_innings_min20,9,Rajiv Gandhi International Stadium,full_matches,75.0
+Venue,venue_first_innings_min20,10,Dubai International Cricket Stadium,avg_inn1,163.8
+Venue,venue_first_innings_min20,10,Dubai International Cricket Stadium,avg_inn1_vs_season,-2.0
+Venue,venue_first_innings_min20,10,Dubai International Cricket Stadium,full_matches,46.0
+Venue,venue_first_innings_min20,11,Maharashtra Cricket Association Stadium,avg_inn1,162.4
+Venue,venue_first_innings_min20,11,Maharashtra Cricket Association Stadium,avg_inn1_vs_season,-2.9
+Venue,venue_first_innings_min20,11,Maharashtra Cricket Association Stadium,full_matches,51.0
+Venue,venue_first_innings_min20,12,Sawai Mansingh Stadium,avg_inn1,161.7
+Venue,venue_first_innings_min20,12,Sawai Mansingh Stadium,avg_inn1_vs_season,-4.8
+Venue,venue_first_innings_min20,12,Sawai Mansingh Stadium,full_matches,56.0
+Venue,venue_first_innings_min20,13,Dr DY Patil Sports Academy,avg_inn1,159.6
+Venue,venue_first_innings_min20,13,Dr DY Patil Sports Academy,avg_inn1_vs_season,-6.7
+Venue,venue_first_innings_min20,13,Dr DY Patil Sports Academy,full_matches,37.0
+Venue,venue_first_innings_min20,14,Sharjah Cricket Stadium,avg_inn1,159.0
+Venue,venue_first_innings_min20,14,Sharjah Cricket Stadium,avg_inn1_vs_season,-5.6
+Venue,venue_first_innings_min20,14,Sharjah Cricket Stadium,full_matches,28.0
+Venue,venue_first_innings_min20,15,Sheikh Zayed Stadium,avg_inn1,158.9
+Venue,venue_first_innings_min20,15,Sheikh Zayed Stadium,avg_inn1_vs_season,-7.3
+Venue,venue_first_innings_min20,15,Sheikh Zayed Stadium,full_matches,37.0
+Venue,venue_chasing_min20,1,Sawai Mansingh Stadium,chase_win_pct,64.9
+Venue,venue_chasing_min20,1,Sawai Mansingh Stadium,decided,57.0
+Venue,venue_chasing_min20,2,Sharjah Cricket Stadium,chase_win_pct,64.3
+Venue,venue_chasing_min20,2,Sharjah Cricket Stadium,decided,28.0
+Venue,venue_chasing_min20,3,Sheikh Zayed Stadium,chase_win_pct,60.0
+Venue,venue_chasing_min20,3,Sheikh Zayed Stadium,decided,35.0
+Venue,venue_chasing_min20,4,Eden Gardens,chase_win_pct,59.1
+Venue,venue_chasing_min20,4,Eden Gardens,decided,93.0
+Venue,venue_chasing_min20,5,Narendra Modi Stadium,chase_win_pct,57.1
+Venue,venue_chasing_min20,5,Narendra Modi Stadium,decided,35.0
+Venue,venue_chasing_min20,6,Punjab Cricket Association IS Bindra Stadium,chase_win_pct,55.7
+Venue,venue_chasing_min20,6,Punjab Cricket Association IS Bindra Stadium,decided,61.0
+Venue,venue_chasing_min20,7,Rajiv Gandhi International Stadium,chase_win_pct,55.3
+Venue,venue_chasing_min20,7,Rajiv Gandhi International Stadium,decided,76.0
+Venue,venue_chasing_min20,8,Wankhede Stadium,chase_win_pct,54.7
+Venue,venue_chasing_min20,8,Wankhede Stadium,decided,117.0
+Venue,venue_chasing_min20,9,M Chinnaswamy Stadium,chase_win_pct,54.4
+Venue,venue_chasing_min20,9,M Chinnaswamy Stadium,decided,90.0
+Venue,venue_chasing_min20,10,Dr DY Patil Sports Academy,chase_win_pct,54.1
+Venue,venue_chasing_min20,10,Dr DY Patil Sports Academy,decided,37.0
+Venue,venue_chasing_min20,11,Dubai International Cricket Stadium,chase_win_pct,51.2
+Venue,venue_chasing_min20,11,Dubai International Cricket Stadium,decided,43.0
+Venue,venue_chasing_min20,12,Arun Jaitley Stadium,chase_win_pct,51.1
+Venue,venue_chasing_min20,12,Arun Jaitley Stadium,decided,88.0
+Venue,venue_chasing_min20,13,Brabourne Stadium,chase_win_pct,48.1
+Venue,venue_chasing_min20,13,Brabourne Stadium,decided,27.0
+Venue,venue_chasing_min20,14,Maharashtra Cricket Association Stadium,chase_win_pct,45.1
+Venue,venue_chasing_min20,14,Maharashtra Cricket Association Stadium,decided,51.0
+Venue,venue_chasing_min20,15,MA Chidambaram Stadium,chase_win_pct,43.4
+Venue,venue_chasing_min20,15,MA Chidambaram Stadium,decided,83.0

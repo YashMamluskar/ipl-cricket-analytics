@@ -1,0 +1,67 @@
+/// 15 standardized franchises (Phase 2 approved mapping).
+table DimTeam
+	lineageTag: 52f5c725-b56f-5097-8a65-475bf61f30d9
+
+	column team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 63eaa1e9-7b1d-5c92-98e4-3271363c1465
+		summarizeBy: none
+		sourceColumn: team_key
+
+	column Franchise
+		dataType: string
+		lineageTag: 285afbdc-6a82-59cc-9969-2b7b798a32fd
+		summarizeBy: none
+		sourceColumn: franchise
+
+	column 'Short name'
+		dataType: string
+		lineageTag: 36d188a6-44a5-5ab1-b179-8f98db94e51d
+		summarizeBy: none
+		sourceColumn: franchise_short
+
+	column 'First season'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 783aafb5-b49e-509c-92bb-f7e0275e3052
+		summarizeBy: none
+		sourceColumn: first_season
+
+	column 'Last season'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f9c80603-252c-512d-bcd8-171b53b0e2eb
+		summarizeBy: none
+		sourceColumn: last_season
+
+	column 'Seasons played'
+		dataType: int64
+		formatString: 0
+		lineageTag: 58dab4dd-6372-53e1-ba25-9e04d150ded7
+		summarizeBy: none
+		sourceColumn: seasons
+
+	column 'Established (10+ seasons)'
+		dataType: int64
+		formatString: 0
+		lineageTag: bf74b76d-88d1-5d78-80a8-d3d705721a0c
+		summarizeBy: none
+		sourceColumn: is_established
+
+	partition DimTeam = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/DimTeam.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"team_key", "franchise", "franchise_short", "first_season", "last_season", "seasons", "is_established"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"team_key", Int64.Type}, {"franchise", type text}, {"franchise_short", type text}, {"first_season", Int64.Type}, {"last_season", Int64.Type}, {"seasons", Int64.Type}, {"is_established", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

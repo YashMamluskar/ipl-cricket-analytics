@@ -1,0 +1,4 @@
+phase,won_n,lost_n,median_rr_won,median_rr_lost,p_run_rate,mean_wkts_won,mean_wkts_lost,p_wickets
+Powerplay,566,481,8.333,7.5,0.0,1.09,1.933,0.0
+Middle,565,481,8.0,7.333,0.0,1.722,3.096,0.0
+Death,504,472,10.667,8.4,0.0,1.149,3.025,0.0

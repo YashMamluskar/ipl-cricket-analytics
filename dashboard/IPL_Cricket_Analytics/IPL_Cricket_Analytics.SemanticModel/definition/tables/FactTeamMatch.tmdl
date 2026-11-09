@@ -1,0 +1,160 @@
+/// Two rows per match: the batting-first team and the chasing team (derived from deliveries, not team1/team2).
+table FactTeamMatch
+	lineageTag: 057fde4a-99c4-5754-9d08-1fbc07ee623d
+
+	column match_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a6d104a7-9e96-547b-b350-73ffa68ca3f5
+		summarizeBy: none
+		sourceColumn: match_id
+
+	column team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f759fc76-6a7f-5133-8c51-3451375d6489
+		summarizeBy: none
+		sourceColumn: team_key
+
+	column opponent_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0c6ee835-ca72-557c-b65c-2af5426b541e
+		summarizeBy: none
+		sourceColumn: opponent_team_key
+
+	column season_year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5c12570d-9692-5dff-99a4-8f7e6261f868
+		summarizeBy: none
+		sourceColumn: season_year
+
+	column venue_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f0d5a7b2-b52d-5052-9427-421bcb4748a7
+		summarizeBy: none
+		sourceColumn: venue_key
+
+	column batted_first
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 42530839-595b-56a7-a5ba-fb8ef36cd65e
+		summarizeBy: none
+		sourceColumn: batted_first
+
+	column won
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 365b4004-5d77-545d-8ecf-19427013a56e
+		summarizeBy: none
+		sourceColumn: won
+
+	column lost
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2e7c3810-e83d-5920-a6a5-59458e5c1201
+		summarizeBy: none
+		sourceColumn: lost
+
+	column decided
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 77cac857-ef56-5626-b77b-5868f1b36853
+		summarizeBy: none
+		sourceColumn: decided
+
+	column result_for
+		dataType: string
+		isHidden
+		lineageTag: b10f9e77-c654-528f-8c65-62d4574dc203
+		summarizeBy: none
+		sourceColumn: result_for
+
+	column is_super_over
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fd073ba0-8871-5bd1-b2d3-3e49087c1450
+		summarizeBy: none
+		sourceColumn: is_super_over
+
+	column is_no_result
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8cfe3445-27a4-53b3-933f-3ef78fb09e07
+		summarizeBy: none
+		sourceColumn: is_no_result
+
+	column is_dls
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8eb96f6d-1ff9-57fe-b3a6-91b0d54b24b3
+		summarizeBy: none
+		sourceColumn: is_dls
+
+	column is_playoff
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a8185c05-c7ca-5c49-8a56-a3ba1d6d69d1
+		summarizeBy: none
+		sourceColumn: is_playoff
+
+	column is_final
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 609425fc-059e-5bdc-b2d5-50b9b765c1cf
+		summarizeBy: none
+		sourceColumn: is_final
+
+	column won_toss
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ef09044e-daee-5089-9a7f-42fbe634bd7c
+		summarizeBy: none
+		sourceColumn: won_toss
+
+	column is_close_match
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 43768591-3327-5eb4-abde-dd5972767149
+		summarizeBy: none
+		sourceColumn: is_close_match
+
+	column is_decided_bf_chase
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 853448c4-10e9-5e9d-9c9c-926c1ee54a89
+		summarizeBy: none
+		sourceColumn: is_decided_bf_chase
+
+	partition FactTeamMatch = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/FactTeamMatch.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"match_id", "team_key", "opponent_team_key", "season_year", "venue_key", "batted_first", "won", "lost", "decided", "result_for", "is_super_over", "is_no_result", "is_dls", "is_playoff", "is_final", "won_toss", "is_close_match", "is_decided_bf_chase"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"match_id", Int64.Type}, {"team_key", Int64.Type}, {"opponent_team_key", Int64.Type}, {"season_year", Int64.Type}, {"venue_key", Int64.Type}, {"batted_first", Int64.Type}, {"won", Int64.Type}, {"lost", Int64.Type}, {"decided", Int64.Type}, {"result_for", type text}, {"is_super_over", Int64.Type}, {"is_no_result", Int64.Type}, {"is_dls", Int64.Type}, {"is_playoff", Int64.Type}, {"is_final", Int64.Type}, {"won_toss", Int64.Type}, {"is_close_match", Int64.Type}, {"is_decided_bf_chase", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

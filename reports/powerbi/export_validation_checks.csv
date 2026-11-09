@@ -1,0 +1,14 @@
+check_id,check,expected,actual,status
+X01,Row counts: matches / deliveries / team-match,1095 / 260920 / 2190,1095 / 260920 / 2190,PASS
+X02,Regulation runs / legal balls / bowler wickets (Phase 3),347470 / 251319 / 11795,347470 / 251319 / 11795,PASS
+X03,Super-over balls retained and flagged,161,161,PASS
+X04,Batting innings: runs / outs equal Phase 3 batter careers,329798 / 12908,329798 / 12908,PASS
+X05,Primary keys unique and non-null in all 9 tables,0,"{'DimSeason': 0, 'DimTeam': 0, 'DimVenue': 0, 'DimPlayer': 0, 'DimPhase': 0, 'FactMatch': 0, 'FactTeamMatch': 0, 'FactBattingInnings': 0, 'FactDelivery': 0}",PASS
+X06,Every foreign key resolves to its dimension (11 FKs),11/11,11/11,PASS
+X07,Season-phase expected runs sum to regulation runs (unbiased adjustment),347470,347470.0,PASS
+X08,Chase base / chases won (Phase 5),1047 / 566,1047 / 566,PASS
+X09,Close matches (Phase 3/5 definition),391,391,PASS
+X10,Full matches / avg first innings equal Phase 3,1061 / 166.3902,1061 / 166.3902,PASS
+X11,Team wins sum to decided matches (1090),1090,1090,PASS
+X12,wkts_before present for every regulation ball,0,0,PASS
+X13,"MySQL: matches, deliveries, runs, bowler wickets, batter runs, team wins equal extracts",6 equal,6 equal,PASS

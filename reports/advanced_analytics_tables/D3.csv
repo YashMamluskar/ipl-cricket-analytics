@@ -1,0 +1,16 @@
+team,batting_rr_vs_league,bowling_econ_vs_league,net_vs_league,win_pct,seasons,decided
+Chennai Super Kings,0.115,-0.165,0.279,58.228,15,237
+Mumbai Indians,0.083,-0.093,0.176,55.172,17,261
+Kolkata Knight Riders,0.053,-0.096,0.149,52.191,17,251
+Rising Pune Supergiants,-0.273,-0.401,0.128,50.0,2,30
+Gujarat Titans,-0.16,-0.237,0.076,62.222,3,45
+Sunrisers Hyderabad,-0.175,-0.157,-0.019,48.352,12,182
+Royal Challengers Bengaluru,0.144,0.174,-0.031,48.81,17,252
+Rajasthan Royals,-0.049,0.017,-0.067,51.142,15,219
+Kochi Tuskers Kerala,-0.135,-0.034,-0.1,42.857,1,14
+Delhi Capitals,-0.074,0.052,-0.126,46.0,17,250
+Lucknow Super Giants,-0.281,-0.142,-0.138,55.814,3,43
+Deccan Chargers,-0.05,0.107,-0.157,38.667,5,75
+Punjab Kings,0.068,0.254,-0.186,45.528,17,246
+Gujarat Lions,0.132,0.499,-0.367,43.333,2,30
+Pune Warriors,-0.536,-0.007,-0.529,26.667,3,45

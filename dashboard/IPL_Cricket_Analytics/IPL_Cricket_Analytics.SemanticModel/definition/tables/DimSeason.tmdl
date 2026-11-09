@@ -1,0 +1,44 @@
+/// Seasons 2008-2024 (year of play).
+table DimSeason
+	lineageTag: 15acdab0-2c42-5c86-8a31-383f6a7b11cd
+
+	column Season
+		dataType: int64
+		formatString: 0
+		lineageTag: fbb38c4b-b067-5e22-b15e-39379e92c610
+		summarizeBy: none
+		sourceColumn: season_year
+
+	column 'Season label'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7b935e7f-ca15-5d21-94f2-c8eef950d849
+		summarizeBy: none
+		sourceColumn: season_label
+
+	column Era
+		dataType: string
+		lineageTag: a8ebbfbe-f4fe-5282-b95a-5697c293b9fa
+		summarizeBy: none
+		sourceColumn: era
+
+	column Period
+		dataType: string
+		lineageTag: 074c3264-153b-593f-9907-ce18704e1372
+		summarizeBy: none
+		sourceColumn: period
+
+	partition DimSeason = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/DimSeason.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"season_year", "season_label", "era", "period"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"season_year", Int64.Type}, {"season_label", Int64.Type}, {"era", type text}, {"period", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

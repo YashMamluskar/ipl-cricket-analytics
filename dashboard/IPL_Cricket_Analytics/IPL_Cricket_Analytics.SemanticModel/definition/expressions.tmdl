@@ -1,0 +1,5 @@
+/// Folder holding the validated CSV extracts (python/06b_export_powerbi_model.py). Change it if the project moves.
+expression DataFolder = "C:/TYDSDA/Data_Analyst_Projects/Project_05_IPL_Cricket_Analytics/data/final/powerbi" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e712dafd-dcd2-5389-8a62-ab3c8830c185
+
+	annotation PBI_ResultType = Text

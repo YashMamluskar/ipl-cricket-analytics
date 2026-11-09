@@ -1,0 +1,4 @@
+phase,runs,balls,outs,dots,fours,sixes,extras,run_rate,dot_pct,boundary_pct,balls_per_dismissal,share_of_runs_pct,overs_in_phase
+Powerplay,102931,78656,3130,36951,12509,2945,6068,7.85,46.98,19.65,25.13,29.62,6
+Middle,150655,116079,4994,37350,10537,5366,6627,7.79,32.18,13.7,23.24,43.36,9
+Death,93884,56584,4784,16099,6781,4725,4977,9.96,28.45,20.33,11.83,27.02,5

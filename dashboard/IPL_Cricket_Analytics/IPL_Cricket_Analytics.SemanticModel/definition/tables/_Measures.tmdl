@@ -1,0 +1,632 @@
+/// All dashboard measures. Definitions follow documentation/transformation_log.md and Phase 3-5 reports.
+table _Measures
+	lineageTag: 971a50e4-9d98-59f5-84d1-dcf3718515af
+
+	/// Matches with play (abandoned-without-a-ball matches are not in the source).
+	measure Matches = COUNTROWS(FactMatch)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: a98df2c1-3827-5be3-a7d3-389f6e97cc32
+
+	/// Distinct seasons in the current filter.
+	measure Seasons = DISTINCTCOUNT(FactMatch[season_year])
+		formatString: 0
+		displayFolder: 1 Overview
+		lineageTag: be14bf16-ec28-5b21-8920-43e4d20da8a3
+
+	/// All runs incl. extras, regulation balls only (super overs excluded).
+	measure 'Total Runs' = CALCULATE(SUM(FactDelivery[total_runs]), FactDelivery[is_super_over] = 0)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: d48eddce-88a0-57c2-a070-d1a9788371c4
+
+	/// Balls that are not wides or no-balls, regulation only.
+	measure 'Legal Balls' = CALCULATE(SUM(FactDelivery[is_legal_delivery]), FactDelivery[is_super_over] = 0)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: f8717e8c-3ac6-5109-904e-b3a825f01008
+
+	/// Bowler-credited wickets: bowled, caught, caught and bowled, lbw, stumped, hit wicket. Excludes run outs, retired hurt/out, obstructing.
+	measure 'Bowler Wickets' = CALCULATE(SUM(FactDelivery[is_bowler_wicket]), FactDelivery[is_super_over] = 0)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: a83927f6-d2d6-5da6-aea5-2457315d32b6
+
+	/// All batter dismissals (incl. run outs); retired hurt is not out.
+	measure Dismissals = CALCULATE(SUM(FactDelivery[is_player_out]), FactDelivery[is_super_over] = 0)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: da479f8d-f1ce-563e-b023-ac75f7c051e1
+
+	/// Runs per over = runs x 6 / legal balls.
+	measure 'Run Rate' = DIVIDE([Total Runs] * 6, [Legal Balls])
+		formatString: 0.00
+		displayFolder: 1 Overview
+		lineageTag: a353aa30-b79d-5b09-8591-6dc293d7ebbc
+
+	/// Run rate in overs 1-6.
+	measure 'Run Rate Powerplay' = CALCULATE([Run Rate], FactDelivery[phase] = "Powerplay")
+		formatString: 0.00
+		displayFolder: 1 Overview
+		lineageTag: 30bbced0-0187-53ee-9888-421bc511e81e
+
+	/// Run rate in overs 7-15.
+	measure 'Run Rate Middle' = CALCULATE([Run Rate], FactDelivery[phase] = "Middle")
+		formatString: 0.00
+		displayFolder: 1 Overview
+		lineageTag: c26757a3-deb4-5697-965d-8adc73ca316f
+
+	/// Run rate in overs 16-20.
+	measure 'Run Rate Death' = CALCULATE([Run Rate], FactDelivery[phase] = "Death")
+		formatString: 0.00
+		displayFolder: 1 Overview
+		lineageTag: 364a6df6-84af-5996-a574-d1033d5e1ec5
+
+	/// Share of runs scored in the phase in context.
+	measure 'Share of Runs' = DIVIDE([Total Runs], CALCULATE([Total Runs], REMOVEFILTERS(DimPhase)))
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: 52f31f54-627e-57e1-ba01-ea2b07bd231e
+
+	/// Not a no-result and target_overs = 20.
+	measure 'Full Matches' = CALCULATE(COUNTROWS(FactMatch), FactMatch[is_full_match] = 1)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: 8e59881c-84b0-568a-8192-6106ab510edb
+
+	/// Average first-innings score over full 20-over matches (D/L, rain-shortened and no-result matches excluded).
+	measure 'Avg First Innings' = CALCULATE(AVERAGE(FactMatch[inn1_runs]), FactMatch[is_full_match] = 1)
+		formatString: 0.0
+		displayFolder: 1 Overview
+		lineageTag: 40da0c93-1cc8-509f-9fd0-1eda5023d911
+
+	/// Regulation runs per match with play.
+	measure 'Runs per Match' = DIVIDE([Total Runs], [Matches])
+		formatString: 0.0
+		displayFolder: 1 Overview
+		lineageTag: 38306b9e-99b8-5a96-8a71-fd67be5b133a
+
+	/// batsman_runs = 4 (documented proxy).
+	measure Fours = CALCULATE(SUM(FactDelivery[is_four]), FactDelivery[is_super_over] = 0)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: aa332fcb-aee1-55de-ae6a-fef7fda8b850
+
+	/// batsman_runs = 6 (documented proxy).
+	measure Sixes = CALCULATE(SUM(FactDelivery[is_six]), FactDelivery[is_super_over] = 0)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: 8759b163-898d-5ca5-ba5f-d0f00b31a6b6
+
+	measure 'Sixes per Match' = DIVIDE([Sixes], [Matches])
+		formatString: 0.0
+		displayFolder: 1 Overview
+		lineageTag: 31b8fa33-4bd6-57bc-b1bd-eb19e5cb0588
+
+	/// Uses approved result_for.
+	measure 'Batting First Wins' = CALCULATE(COUNTROWS(FactMatch), FactMatch[Result for] = "batting first")
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: 704e7d84-d72f-5987-a7e3-3251777bd420
+
+	/// Uses approved result_for (includes 6 D/L chases won 'by runs').
+	measure 'Chasing Wins' = CALCULATE(COUNTROWS(FactMatch), FactMatch[Result for] = "chasing")
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: 208a8f31-6b6e-58d3-96df-ec9a09d4dfc7
+
+	/// Matches decided by runs or wickets (super-over ties and no-results excluded).
+	measure 'Decided Matches' = CALCULATE(COUNTROWS(FactMatch), FactMatch[is_decided_bf_chase] = 1)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: df0ab5e7-7ffb-5554-a8c2-4ef2c91ba289
+
+	measure 'Batting First Win %' = DIVIDE([Batting First Wins], [Decided Matches])
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: f6292f80-9dc2-55ba-ace6-ee51bedd48bb
+
+	measure 'Chasing Win %' = DIVIDE([Chasing Wins], [Decided Matches])
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: 409b4070-2a1b-5129-9085-f027e74adbf3
+
+	/// Share of decided matches won by the toss winner. Association only.
+	measure 'Toss Winner Win %' = CALCULATE(AVERAGE(FactMatch[toss_winner_won]), FactMatch[is_no_result] = 0)
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: c1655055-5810-52d4-b53e-e53a8d83b6de
+
+	/// Toss winners who chose to field: share who won.
+	measure 'Toss Winner Win % (chose field)' = CALCULATE([Toss Winner Win %], FactMatch[Toss decision] = "field")
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: dc532364-babd-59c7-bcba-8d217af51115
+
+	/// Toss winners who chose to bat: share who won.
+	measure 'Toss Winner Win % (chose bat)' = CALCULATE([Toss Winner Win %], FactMatch[Toss decision] = "bat")
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: 55a87656-ab29-5634-bd3b-43de4a4278f5
+
+	/// Won by <= 10 runs, chase completed with <= 6 balls left (both non-D/L), or a tie.
+	measure 'Close Matches' = CALCULATE(COUNTROWS(FactMatch), FactMatch[is_close_match] = 1)
+		formatString: #,0
+		displayFolder: 1 Overview
+		lineageTag: f36016ab-7ba5-596e-9c7f-a7a87fc43f49
+
+	measure 'Close Match %' = DIVIDE([Close Matches], CALCULATE(COUNTROWS(FactMatch), FactMatch[is_no_result] = 0))
+		formatString: 0.0%
+		displayFolder: 1 Overview
+		lineageTag: d8f18a16-5297-5d67-851e-c8f6c9ae9167
+
+	/// Change in run rate vs the previous season.
+	measure 'Run Rate vs Previous Season' = VAR y = SELECTEDVALUE(DimSeason[Season]) VAR prev = CALCULATE([Run Rate], REMOVEFILTERS(DimSeason), DimSeason[Season] = y - 1) RETURN IF(NOT ISBLANK(y) && NOT ISBLANK(prev), [Run Rate] - prev)
+		formatString: +0.00;-0.00;0.00
+		displayFolder: 1 Overview
+		lineageTag: ad685384-a54d-5ab0-a9d9-20eff21412a4
+
+	measure 'Avg First Innings vs Previous Season' = VAR y = SELECTEDVALUE(DimSeason[Season]) VAR prev = CALCULATE([Avg First Innings], REMOVEFILTERS(DimSeason), DimSeason[Season] = y - 1) RETURN IF(NOT ISBLANK(y) && NOT ISBLANK(prev), [Avg First Innings] - prev)
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 1 Overview
+		lineageTag: c6bf4e10-89a5-55d1-9c42-715c70e553fa
+
+	/// Team appearances (2 per match).
+	measure 'Team Matches' = COUNTROWS(FactTeamMatch)
+		formatString: #,0
+		displayFolder: 2 Teams
+		lineageTag: cad93ee8-d243-50a9-baee-07ed163d5581
+
+	/// Includes super-over wins.
+	measure Wins = SUM(FactTeamMatch[won])
+		formatString: #,0
+		displayFolder: 2 Teams
+		lineageTag: ffa65043-8bf4-5438-8f4f-ce88c16f57db
+
+	measure Losses = SUM(FactTeamMatch[lost])
+		formatString: #,0
+		displayFolder: 2 Teams
+		lineageTag: 71477b40-feb8-55fa-a399-76f7d768eadb
+
+	/// Team matches excluding no-results.
+	measure Decided = SUM(FactTeamMatch[decided])
+		formatString: #,0
+		displayFolder: 2 Teams
+		lineageTag: 54da24e6-6548-54b7-b1de-4faaf82c524c
+
+	/// Wins / decided matches.
+	measure 'Win %' = DIVIDE([Wins], [Decided])
+		formatString: 0.0%
+		displayFolder: 2 Teams
+		lineageTag: f650081f-7ae4-5542-b127-78af49c72130
+
+	/// Finals won (0 for franchises that never won or reached a final).
+	measure Titles = COALESCE(CALCULATE([Wins], FactTeamMatch[is_final] = 1), 0)
+		formatString: 0
+		displayFolder: 2 Teams
+		lineageTag: 1f94d015-21d8-5715-8cb4-53f65fd84c1c
+
+	measure 'Team Seasons' = DISTINCTCOUNT(FactTeamMatch[season_year])
+		formatString: 0
+		displayFolder: 2 Teams
+		lineageTag: 906979ec-01c7-56f6-9cae-aa490b2202e9
+
+	measure 'Bat First Win % (Team)' = DIVIDE(CALCULATE([Wins], FactTeamMatch[batted_first] = 1, FactTeamMatch[is_decided_bf_chase] = 1), CALCULATE(COUNTROWS(FactTeamMatch), FactTeamMatch[batted_first] = 1, FactTeamMatch[is_decided_bf_chase] = 1))
+		formatString: 0.0%
+		displayFolder: 2 Teams
+		lineageTag: ecb59b96-8005-5264-bf34-aa21af90423a
+
+	measure 'Chase Win % (Team)' = DIVIDE(CALCULATE([Wins], FactTeamMatch[batted_first] = 0, FactTeamMatch[is_decided_bf_chase] = 1), CALCULATE(COUNTROWS(FactTeamMatch), FactTeamMatch[batted_first] = 0, FactTeamMatch[is_decided_bf_chase] = 1))
+		formatString: 0.0%
+		displayFolder: 2 Teams
+		lineageTag: 9c7485bb-432c-5838-a3db-78e3daf958cf
+
+	measure 'Close Matches (Team)' = CALCULATE([Decided], FactTeamMatch[is_close_match] = 1)
+		formatString: #,0
+		displayFolder: 2 Teams
+		lineageTag: 0bb87d3e-fe19-5cf3-843a-2247f180105d
+
+	/// Close-match win %; blank for teams with fewer than 20 close matches (Phase 5 threshold).
+	measure 'Close Match Win % (min 20)' = VAR n = [Close Matches (Team)] RETURN IF(n >= 20, DIVIDE(CALCULATE([Wins], FactTeamMatch[is_close_match] = 1), n))
+		formatString: 0.0%
+		displayFolder: 2 Teams
+		lineageTag: 4f01f751-dd10-547f-86dd-52728a4fe4ae
+
+	/// Runs per over scored above the league rate for the same seasons and phases.
+	measure 'Team Batting vs League' = CALCULATE(DIVIDE((SUM(FactDelivery[total_runs]) - SUM(FactDelivery[exp_runs])) * 6, SUM(FactDelivery[is_legal_delivery])), FactDelivery[is_super_over] = 0)
+		formatString: +0.00;-0.00;0.00
+		displayFolder: 2 Teams
+		lineageTag: 94901688-9b1f-5572-bf71-42494a72b002
+
+	/// Runs per over conceded above the league rate (negative = better).
+	measure 'Team Bowling vs League' = CALCULATE(DIVIDE((SUM(FactDelivery[total_runs]) - SUM(FactDelivery[exp_runs])) * 6, SUM(FactDelivery[is_legal_delivery])), FactDelivery[is_super_over] = 0, USERELATIONSHIP(FactDelivery[bowling_team_key], DimTeam[team_key]))
+		formatString: +0.00;-0.00;0.00
+		displayFolder: 2 Teams
+		lineageTag: 0b2c77b9-1f48-5ebd-8e87-601a1f4e1bff
+
+	/// Runs per over saved vs league (positive = better).
+	measure 'Team Runs Saved vs League' = -[Team Bowling vs League]
+		formatString: +0.00;-0.00;0.00
+		displayFolder: 2 Teams
+		lineageTag: be5b562d-aa0c-5d5f-92eb-d227831279f5
+
+	/// Season- and phase-adjusted run-rate differential (Phase 5 D3).
+	measure 'Team Net vs League' = [Team Batting vs League] - [Team Bowling vs League]
+		formatString: +0.00;-0.00;0.00
+		displayFolder: 2 Teams
+		lineageTag: 8e3e3f01-7c2c-5f03-9402-55cd333b30d4
+
+	measure 'Team Wickets vs League per 120' = CALCULATE(DIVIDE((SUM(FactDelivery[is_bowler_wicket]) - SUM(FactDelivery[exp_bowler_wkts])) * 120, SUM(FactDelivery[is_legal_delivery])), FactDelivery[is_super_over] = 0, USERELATIONSHIP(FactDelivery[bowling_team_key], DimTeam[team_key]))
+		formatString: +0.00;-0.00;0.00
+		displayFolder: 2 Teams
+		lineageTag: 1643f939-4f72-5bcd-99bf-8a9aa353ced9
+
+	/// Batting innings (appeared as striker, non-striker or dismissed).
+	measure Innings = COUNTROWS(FactBattingInnings)
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: 4a9b3e09-d0fa-556d-9fce-51c8f5f1411c
+
+	/// Runs off the bat (byes, leg-byes and wides excluded).
+	measure 'Bat Runs' = SUM(FactBattingInnings[runs])
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: 84d8de7b-969e-5a37-88c3-694928df1ab5
+
+	/// All balls except wides.
+	measure 'Balls Faced' = SUM(FactBattingInnings[balls])
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: abb3a21a-0fc9-5d3a-8578-65592a8a26e6
+
+	/// Dismissals (retired hurt is not out).
+	measure Outs = SUM(FactBattingInnings[is_out])
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: a99d82f2-1322-5491-a354-e3a6ec34dbf8
+
+	measure 'Not Outs' = [Innings] - [Outs]
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: 231cab75-e930-5729-88cc-032f09299853
+
+	/// Runs / dismissals.
+	measure 'Batting Average' = DIVIDE([Bat Runs], [Outs])
+		formatString: 0.00
+		displayFolder: 3 Batting
+		lineageTag: 131422be-19d1-5859-9902-3fb657005e69
+
+	/// Runs per 100 balls faced.
+	measure 'Strike Rate' = DIVIDE([Bat Runs] * 100, [Balls Faced])
+		formatString: 0.00
+		displayFolder: 3 Batting
+		lineageTag: e271b17d-58c7-5177-bb8e-fcf2f9991254
+
+	measure 'Bat Fours' = SUM(FactBattingInnings[fours])
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: cb79df12-4c47-5e57-85ab-26dccedca2b1
+
+	measure 'Bat Sixes' = SUM(FactBattingInnings[sixes])
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: dc04b7a2-88d0-5f74-a71f-106a51e2166e
+
+	/// Fours + sixes per ball faced.
+	measure 'Boundary %' = DIVIDE([Bat Fours] + [Bat Sixes], [Balls Faced])
+		formatString: 0.0%
+		displayFolder: 3 Batting
+		lineageTag: f318bf6d-427a-5ed1-832b-c74c5da976d9
+
+	/// Share of runs from boundaries.
+	measure 'Boundary Run %' = DIVIDE(4 * [Bat Fours] + 6 * [Bat Sixes], [Bat Runs])
+		formatString: 0.0%
+		displayFolder: 3 Batting
+		lineageTag: 945b0c21-46a9-53af-b352-c0f6914b9695
+
+	/// Share of innings with 30+ runs.
+	measure '30+ Rate' = DIVIDE(SUM(FactBattingInnings[is_30_plus]), [Innings])
+		formatString: 0.0%
+		displayFolder: 3 Batting
+		lineageTag: ada63e05-00ee-547f-a06d-e171d3f33960
+
+	/// Innings of 50 or more (incl. hundreds).
+	measure 'Fifties Plus' = SUM(FactBattingInnings[is_50_plus])
+		formatString: 0
+		displayFolder: 3 Batting
+		lineageTag: e25400d6-47a6-5e4c-902f-852b6264a83f
+
+	measure Hundreds = SUM(FactBattingInnings[is_100_plus])
+		formatString: 0
+		displayFolder: 3 Batting
+		lineageTag: 069f7564-e962-57ce-b9e0-ebe83dc272fc
+
+	measure 'Highest Score' = MAX(FactBattingInnings[runs])
+		formatString: 0
+		displayFolder: 3 Batting
+		lineageTag: 095728b4-202b-510e-b69a-5f7686167102
+
+	/// Innings for batters with 50+ innings (ranking threshold).
+	measure 'Q Innings' = IF([Innings] >= 50, [Innings])
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: 6542acfd-089d-5bfd-ae58-e9d42d06ae4f
+
+	/// Average shown only with 50+ innings.
+	measure 'Q Batting Average' = IF([Innings] >= 50, [Batting Average])
+		formatString: 0.00
+		displayFolder: 3 Batting
+		lineageTag: 8f9c255e-2a80-5137-b36b-99833d01a711
+
+	/// Strike rate shown only with 500+ balls faced.
+	measure 'Q Strike Rate' = IF([Balls Faced] >= 500, [Strike Rate])
+		formatString: 0.00
+		displayFolder: 3 Batting
+		lineageTag: 7c91e3fa-ad2f-5c5f-b830-8d4e63f68885
+
+	measure 'Q 30+ Rate' = IF([Innings] >= 50, [30+ Rate])
+		formatString: 0.0%
+		displayFolder: 3 Batting
+		lineageTag: ae586780-53f5-5dcd-ae98-74032c55392d
+
+	/// Batter runs, shown only for the 10 highest scorers in the current filters.
+	measure 'Top 10 Run Scorers' = VAR r = [Bat Runs] RETURN IF(NOT ISBLANK(r) && RANKX(ALLSELECTED(DimPlayer), [Bat Runs], , DESC) <= 10, r)
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: f0b5b77b-df68-5996-947f-7ceff70e1190
+
+	/// Strike rate from ball-level data (used by phase visuals).
+	measure 'Batter SR (balls)' = CALCULATE(DIVIDE(SUM(FactDelivery[batsman_runs]) * 100, SUM(FactDelivery[is_ball_faced])), FactDelivery[is_super_over] = 0)
+		formatString: 0.0
+		displayFolder: 3 Batting
+		lineageTag: a8b79b54-15b6-56e7-bcd7-b3ba87a96c8f
+
+	measure 'Batter Runs (balls)' = CALCULATE(SUM(FactDelivery[batsman_runs]), FactDelivery[is_super_over] = 0)
+		formatString: #,0
+		displayFolder: 3 Batting
+		lineageTag: 6b956013-0f24-5e6d-ac65-78523cd8a6d0
+
+	/// Legal balls bowled.
+	measure 'Bowl Legal Balls' = CALCULATE(SUM(FactDelivery[is_legal_delivery]), FactDelivery[is_super_over] = 0, USERELATIONSHIP(FactDelivery[bowler_key], DimPlayer[player_key]), USERELATIONSHIP(FactDelivery[bowling_team_key], DimTeam[team_key]))
+		formatString: #,0
+		displayFolder: 4 Bowling
+		lineageTag: a2e9c7e6-09b7-55e3-be80-806fb0e10682
+
+	/// Batter runs + wides + no-balls (byes, leg-byes, penalties not charged).
+	measure 'Bowl Runs Conceded' = CALCULATE(SUM(FactDelivery[bowler_runs_conceded]), FactDelivery[is_super_over] = 0, USERELATIONSHIP(FactDelivery[bowler_key], DimPlayer[player_key]), USERELATIONSHIP(FactDelivery[bowling_team_key], DimTeam[team_key]))
+		formatString: #,0
+		displayFolder: 4 Bowling
+		lineageTag: 53b5840a-8b41-53db-bc4c-6e78b0e4f2df
+
+	/// Bowler-credited wickets only.
+	measure 'Bowl Wickets' = CALCULATE(SUM(FactDelivery[is_bowler_wicket]), FactDelivery[is_super_over] = 0, USERELATIONSHIP(FactDelivery[bowler_key], DimPlayer[player_key]), USERELATIONSHIP(FactDelivery[bowling_team_key], DimTeam[team_key]))
+		formatString: #,0
+		displayFolder: 4 Bowling
+		lineageTag: 6d62add4-1a53-5cb4-9988-96b1153f74fa
+
+	measure 'Bowl Dots' = CALCULATE(SUM(FactDelivery[is_dot_ball]), FactDelivery[is_super_over] = 0, USERELATIONSHIP(FactDelivery[bowler_key], DimPlayer[player_key]), USERELATIONSHIP(FactDelivery[bowling_team_key], DimTeam[team_key]))
+		formatString: #,0
+		displayFolder: 4 Bowling
+		lineageTag: 21cccb1a-ae41-5a62-92dd-dd74bb0fc64e
+
+	/// Runs conceded per over (legal balls).
+	measure Economy = DIVIDE([Bowl Runs Conceded] * 6, [Bowl Legal Balls])
+		formatString: 0.00
+		displayFolder: 4 Bowling
+		lineageTag: be792d28-1dd6-5da1-8a31-d730e5b06101
+
+	measure 'Bowling Average' = DIVIDE([Bowl Runs Conceded], [Bowl Wickets])
+		formatString: 0.00
+		displayFolder: 4 Bowling
+		lineageTag: 415360cb-e350-5379-b62d-55aec46b9bcc
+
+	/// Legal balls per bowler wicket.
+	measure 'Bowling Strike Rate' = DIVIDE([Bowl Legal Balls], [Bowl Wickets])
+		formatString: 0.0
+		displayFolder: 4 Bowling
+		lineageTag: 62084621-9776-5a3d-bfb4-6507958b6047
+
+	measure 'Dot %' = DIVIDE([Bowl Dots], [Bowl Legal Balls])
+		formatString: 0.0%
+		displayFolder: 4 Bowling
+		lineageTag: b88f42c7-4ce2-5e50-a8cd-7750b9aac687
+
+	/// Shown only with 1,000+ legal balls.
+	measure 'Q Legal Balls' = IF([Bowl Legal Balls] >= 1000, [Bowl Legal Balls])
+		formatString: #,0
+		displayFolder: 4 Bowling
+		lineageTag: f6615829-b118-5fbf-983e-6287572a1a57
+
+	measure 'Q Economy' = IF([Bowl Legal Balls] >= 1000, [Economy])
+		formatString: 0.00
+		displayFolder: 4 Bowling
+		lineageTag: d5b1a3bf-a0a1-58de-bf00-d82778035706
+
+	measure 'Q Bowling Average' = IF([Bowl Legal Balls] >= 1000, [Bowling Average])
+		formatString: 0.00
+		displayFolder: 4 Bowling
+		lineageTag: 6323efab-ce04-58a3-8bc7-20da6b8d59d8
+
+	measure 'Q Bowling Strike Rate' = IF([Bowl Legal Balls] >= 1000, [Bowling Strike Rate])
+		formatString: 0.0
+		displayFolder: 4 Bowling
+		lineageTag: a6514a08-9633-5cd9-a120-88d04fda3c86
+
+	measure 'Q Dot %' = IF([Bowl Legal Balls] >= 1000, [Dot %])
+		formatString: 0.0%
+		displayFolder: 4 Bowling
+		lineageTag: 63a7b326-b058-593c-9faa-c27c52d71516
+
+	measure 'Q Wickets' = IF([Bowl Legal Balls] >= 1000, [Bowl Wickets])
+		formatString: #,0
+		displayFolder: 4 Bowling
+		lineageTag: ba03cfd4-a4fd-51d9-89e6-82d5fbfc61a8
+
+	measure 'Top 10 Wicket Takers' = VAR w = [Bowl Wickets] RETURN IF(NOT ISBLANK(w) && RANKX(ALLSELECTED(DimPlayer), [Bowl Wickets], , DESC) <= 10, w)
+		formatString: #,0
+		displayFolder: 4 Bowling
+		lineageTag: a5134b23-4871-5e3b-a2a6-e2f323a5cd78
+
+	measure 'Player A Name' = SELECTEDVALUE('Player A'[Player A], "Select player A")
+		displayFolder: 5 Comparison
+		lineageTag: 632a6c35-8343-5823-8850-54b3d0c103f5
+
+	measure 'Player B Name' = SELECTEDVALUE('Player B'[Player B], "Select player B")
+		displayFolder: 5 Comparison
+		lineageTag: 77e7e510-e3ce-58c0-ac30-0d9cf3206fc8
+
+	measure 'Player A Innings' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Innings], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: #,0
+		displayFolder: 5 Comparison
+		lineageTag: d73e58e0-52c2-57e0-9c0f-15a8bf41a70a
+
+	measure 'Player A Runs' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Bat Runs], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: #,0
+		displayFolder: 5 Comparison
+		lineageTag: f4f8a00d-900c-59df-a504-09db107acce4
+
+	measure 'Player A Average' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Batting Average], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: 0.00
+		displayFolder: 5 Comparison
+		lineageTag: b7ed17ab-8374-5277-899c-7d0f1f970dbf
+
+	measure 'Player A Strike Rate' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Strike Rate], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: 0.00
+		displayFolder: 5 Comparison
+		lineageTag: 49d4289d-9a0e-5447-885b-5780b5176d3a
+
+	measure 'Player A Boundary %' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Boundary %], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: 0.0%
+		displayFolder: 5 Comparison
+		lineageTag: 0121900e-ebb6-5a24-ade9-498ad25c25c5
+
+	measure 'Player A Wickets' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Bowl Wickets], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: #,0
+		displayFolder: 5 Comparison
+		lineageTag: d46257ee-8d84-5fc1-bbf9-4274aeff84c5
+
+	measure 'Player A Economy' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Economy], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: 0.00
+		displayFolder: 5 Comparison
+		lineageTag: 9a378fe8-9e01-5a5d-886b-b9d33c7db7dc
+
+	measure 'Player A Phase SR' = IF(HASONEVALUE('Player A'[Player A]), CALCULATE([Batter SR (balls)], TREATAS(VALUES('Player A'[Player A]), DimPlayer[Player])))
+		formatString: 0.0
+		displayFolder: 5 Comparison
+		lineageTag: 2b1cbb66-3cfe-5d12-a91a-16d9725e5cc0
+
+	measure 'Player B Innings' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Innings], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: #,0
+		displayFolder: 5 Comparison
+		lineageTag: da1cf68e-1a20-52b8-84b0-4ee448f7f762
+
+	measure 'Player B Runs' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Bat Runs], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: #,0
+		displayFolder: 5 Comparison
+		lineageTag: 38632259-c4c3-5108-b6c5-38af2efcd0b0
+
+	measure 'Player B Average' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Batting Average], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: 0.00
+		displayFolder: 5 Comparison
+		lineageTag: 906efc3e-bc85-5bfb-a770-9ecfc12ffc76
+
+	measure 'Player B Strike Rate' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Strike Rate], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: 0.00
+		displayFolder: 5 Comparison
+		lineageTag: fb338653-adc9-51ce-ae0f-b1682150c988
+
+	measure 'Player B Boundary %' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Boundary %], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: 0.0%
+		displayFolder: 5 Comparison
+		lineageTag: e9ce2442-395a-5afc-8afe-932d0de0cae3
+
+	measure 'Player B Wickets' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Bowl Wickets], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: #,0
+		displayFolder: 5 Comparison
+		lineageTag: fcdfdb6c-2af4-59ae-8bb5-7df89bba3d5c
+
+	measure 'Player B Economy' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Economy], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: 0.00
+		displayFolder: 5 Comparison
+		lineageTag: 77dbf68f-d73c-5e2e-9b14-7f881c67d42e
+
+	measure 'Player B Phase SR' = IF(HASONEVALUE('Player B'[Player B]), CALCULATE([Batter SR (balls)], TREATAS(VALUES('Player B'[Player B]), DimPlayer[Player])))
+		formatString: 0.0
+		displayFolder: 5 Comparison
+		lineageTag: aa54c1c5-c33b-5a1a-830b-d0712e7bc0d1
+
+	/// Full 20-over, non-D/L chases decided by runs or wickets.
+	measure Chases = CALCULATE(COUNTROWS(FactMatch), FactMatch[is_chase_base] = 1)
+		formatString: #,0
+		displayFolder: 6 Match
+		lineageTag: 3cdae376-c626-5785-81f1-df9d7a9f6eb6
+
+	measure 'Chase Success %' = DIVIDE(CALCULATE(SUM(FactMatch[chase_won]), FactMatch[is_chase_base] = 1), [Chases])
+		formatString: 0.0%
+		displayFolder: 6 Match
+		lineageTag: 7737b658-935c-519c-b7ea-51b99a9c5e53
+
+	/// 95% Wilson interval lower bound.
+	measure 'Chase Success CI Low' = VAR n = [Chases] VAR p = DIVIDE(CALCULATE(SUM(FactMatch[chase_won]), FactMatch[is_chase_base] = 1), n) VAR z = 1.959964 VAR den = 1 + z * z / n VAR c = (p + z * z / (2 * n)) / den VAR h = z * SQRT(p * (1 - p) / n + z * z / (4 * n * n)) / den RETURN IF(n > 0, MAX(0, c - h))
+		formatString: 0.0%
+		displayFolder: 6 Match
+		lineageTag: a02fa429-9715-5e06-8d00-af69c4adc0ae
+
+	measure 'Chase Success CI High' = VAR n = [Chases] VAR p = DIVIDE(CALCULATE(SUM(FactMatch[chase_won]), FactMatch[is_chase_base] = 1), n) VAR z = 1.959964 VAR den = 1 + z * z / n VAR c = (p + z * z / (2 * n)) / den VAR h = z * SQRT(p * (1 - p) / n + z * z / (4 * n * n)) / den RETURN IF(n > 0, MIN(1, c + h))
+		formatString: 0.0%
+		displayFolder: 6 Match
+		lineageTag: d8a2a315-ec05-592f-8cef-a2d40cf8e2d6
+
+	/// Average of (first-innings score - that season's league average), full matches.
+	measure 'Avg First Innings vs Season' = AVERAGEX(FILTER(FactMatch, FactMatch[is_full_match] = 1), FactMatch[inn1_runs] - CALCULATE(AVERAGE(FactMatch[inn1_runs]), ALLEXCEPT(FactMatch, FactMatch[season_year]), FactMatch[is_full_match] = 1))
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 6 Match
+		lineageTag: 307f69be-734e-553d-ab88-31aedb10fd53
+
+	/// 1 when the venue has 20+ full and 20+ decided matches.
+	measure 'Venue Qualifies' = IF([Full Matches] >= 20 && [Decided Matches] >= 20, 1)
+		formatString: 0
+		displayFolder: 6 Match
+		lineageTag: 662e08bc-fbef-53ea-b62b-50bc6de02b52
+
+	measure 'Venue Full Matches (min 20)' = IF([Venue Qualifies] = 1, [Full Matches])
+		formatString: #,0
+		displayFolder: 6 Match
+		lineageTag: da512cdf-c5dd-57ca-851d-1076c181beca
+
+	measure 'Venue Avg First Innings (min 20)' = IF([Venue Qualifies] = 1, [Avg First Innings])
+		formatString: 0.0
+		displayFolder: 6 Match
+		lineageTag: b2f5a7de-a129-58ab-8b74-595e0e1b20ed
+
+	measure 'Venue vs Season (min 20)' = IF([Venue Qualifies] = 1, [Avg First Innings vs Season])
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 6 Match
+		lineageTag: a7fddb45-f3ae-5df5-b17f-755211f36b93
+
+	measure 'Venue Chase Win % (min 20)' = IF([Venue Qualifies] = 1, [Chasing Win %])
+		formatString: 0.0%
+		displayFolder: 6 Match
+		lineageTag: 14171bfe-9cf5-52f1-9655-4d507336d353
+
+	measure 'Toss Matches' = CALCULATE(COUNTROWS(FactMatch), FactMatch[is_no_result] = 0)
+		formatString: #,0
+		displayFolder: 6 Match
+		lineageTag: 8bda61e4-26ab-569c-b13f-fa16ed000eb3
+
+	column Placeholder
+		dataType: int64
+		isHidden
+		lineageTag: 588ce4ca-6189-5ee6-b7f4-317e19058845
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Placeholder = Int64.Type], {})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

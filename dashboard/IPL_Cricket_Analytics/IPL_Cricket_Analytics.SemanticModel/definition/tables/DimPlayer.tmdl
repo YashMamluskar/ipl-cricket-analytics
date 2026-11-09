@@ -1,0 +1,31 @@
+/// 741 players (Cricsheet names).
+table DimPlayer
+	lineageTag: ba9c7b41-0fa8-5ef3-bffc-c6aca7f65fa8
+
+	column player_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 534af551-279d-5ffe-87a3-52d79f306d81
+		summarizeBy: none
+		sourceColumn: player_key
+
+	column Player
+		dataType: string
+		lineageTag: 17e98022-f78e-5c98-bb64-24c71f662eb6
+		summarizeBy: none
+		sourceColumn: player
+
+	partition DimPlayer = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/DimPlayer.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"player_key", "player"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"player_key", Int64.Type}, {"player", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,137 @@
+/// One row per player per batting innings (appeared as striker, non-striker or was dismissed). Regulation only.
+table FactBattingInnings
+	lineageTag: a2e03495-7e5d-506e-93ae-4873149ce272
+
+	column match_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a9c999a7-f873-562e-a15d-521161ea5b7c
+		summarizeBy: none
+		sourceColumn: match_id
+
+	column inning
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 834fdde9-6393-5d6f-ae5c-8c12ca82e8c7
+		summarizeBy: none
+		sourceColumn: inning
+
+	column player_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fa5caa04-6baf-51ab-8986-9471ee09e853
+		summarizeBy: none
+		sourceColumn: player_key
+
+	column team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f64da563-71a3-5eac-a612-1b1af11fb7ab
+		summarizeBy: none
+		sourceColumn: team_key
+
+	column opponent_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 59b506b7-1554-5a8a-9673-b755f8c546e0
+		summarizeBy: none
+		sourceColumn: opponent_team_key
+
+	column season_year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6ca33c4a-b45b-53d7-bcca-68d96296f116
+		summarizeBy: none
+		sourceColumn: season_year
+
+	column venue_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cc45df50-8cf6-576e-8ddb-b2eaed3267f3
+		summarizeBy: none
+		sourceColumn: venue_key
+
+	column runs
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f9fbdc1e-7409-5a40-880b-339d9e9fccd2
+		summarizeBy: none
+		sourceColumn: runs
+
+	column balls
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ada4e62a-ed1b-595c-8dd9-86bbcd44e1c4
+		summarizeBy: none
+		sourceColumn: balls
+
+	column fours
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 46ec257a-1d58-5bfd-976e-34c0b35bcd64
+		summarizeBy: none
+		sourceColumn: fours
+
+	column sixes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 04bd802f-dd99-5cce-a3ed-fd8ccf237d45
+		summarizeBy: none
+		sourceColumn: sixes
+
+	column is_out
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4a44f475-c30c-5dd1-97c4-967560df8c99
+		summarizeBy: none
+		sourceColumn: is_out
+
+	column is_30_plus
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b4de2b0b-52b4-5538-a5de-cbb7d69fe40d
+		summarizeBy: none
+		sourceColumn: is_30_plus
+
+	column is_50_plus
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6fae0707-11da-5991-87c5-db64a6d44415
+		summarizeBy: none
+		sourceColumn: is_50_plus
+
+	column is_100_plus
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0d40a0d9-2a52-5a17-b9a5-6b8760771d8f
+		summarizeBy: none
+		sourceColumn: is_100_plus
+
+	partition FactBattingInnings = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/FactBattingInnings.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"match_id", "inning", "player_key", "team_key", "opponent_team_key", "season_year", "venue_key", "runs", "balls", "fours", "sixes", "is_out", "is_30_plus", "is_50_plus", "is_100_plus"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"match_id", Int64.Type}, {"inning", Int64.Type}, {"player_key", Int64.Type}, {"team_key", Int64.Type}, {"opponent_team_key", Int64.Type}, {"season_year", Int64.Type}, {"venue_key", Int64.Type}, {"runs", Int64.Type}, {"balls", Int64.Type}, {"fours", Int64.Type}, {"sixes", Int64.Type}, {"is_out", Int64.Type}, {"is_30_plus", Int64.Type}, {"is_50_plus", Int64.Type}, {"is_100_plus", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

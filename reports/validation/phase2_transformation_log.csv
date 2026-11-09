@@ -1,0 +1,28 @@
+step,table,column,action,rows_affected,detail
+1,matches,season_year,derive from match date,1095,"178 rows whose label differs from play year ('2007/08','2009/10','2020/21')"
+2,matches,is_playoff,flag non-League matches,66,
+3,matches,venue,standardise via venue_mapping.csv,506,58 raw strings -> 36 grounds
+4,matches,city,fill missing city from same venue's recorded city,51,"{'Dubai': 33, 'Sharjah': 18}"
+5,matches,city,standardise city spelling per ground (approved),93,"{('Bangalore', 'Bengaluru'): 65, ('Mumbai', 'Navi Mumbai'): 28}"
+6,matches,team1,standardise franchise via franchise_mapping.csv,319,
+7,matches,team2,standardise franchise via franchise_mapping.csv,288,
+8,matches,toss_winner,standardise franchise via franchise_mapping.csv,284,
+9,matches,winner,standardise franchise via franchise_mapping.csv,281,
+10,matches,win_type,derive: runs / wickets / super over (tie) / no result,1095,
+11,matches,target_balls,convert cricket overs notation (x.y) to balls,1092,4 fractional value(s)
+12,deliveries,delivery_id,surrogate key = raw row number (1-based),260920,
+13,deliveries,is_super_over,flag innings >= 3 as super over (rows retained),161,"super_over_number: {0: 260759, 1: 149, 2: 12}"
+14,deliveries,batting_team,standardise franchise via franchise_mapping.csv,71537,
+15,deliveries,bowling_team,standardise franchise via franchise_mapping.csv,71494,
+16,deliveries,over_number,derive 1-based over number (over + 1); raw 0-based 'over' kept,260920,
+17,deliveries,is_legal_delivery,1 unless wide or no-ball,251471,illegal = 9449
+18,deliveries,is_seven_ball_over,flag overs with >6 legal balls (kept as recorded),225,29 overs
+19,deliveries,phase,Powerplay 1-6 / Middle 7-15 / Death 16-20 / Super Over,260920,"{'Middle': 119552, 'Powerplay': 81744, 'Death': 59463, 'Super Over': 161}"
+20,deliveries,bowler_runs_conceded,"batter runs + wides + no-balls (excludes byes, leg-byes, penalty)",260920,
+21,deliveries,is_ball_faced,ball counts as faced by batter unless wide (no-balls ARE faced),252540,
+22,deliveries,is_four/is_six,batsman_runs == 4 / 6 (no boundary flag in source),42901,
+23,deliveries,is_player_out,is_wicket excluding retired hurt,12935,15 retired-hurt rows set to not out
+24,deliveries,is_bowler_wicket,"dismissal_kind in ['bowled', 'caught', 'caught and bowled', 'hit wicket', 'lbw', 'stumped']",11815,
+25,matches,batting_first_team / chasing_team,derive from innings-1 batting team in deliveries,1095,
+26,matches,inn1_* / inn2_*,"regulation-innings runs, wickets (excl. retired hurt), legal balls",1095,3 matches without a 2nd innings (no result)
+27,matches,result_for,batting first / chasing / super over / no result,1095,"{'chasing': 584, 'batting first': 492, 'super over': 14, 'no result': 5}"

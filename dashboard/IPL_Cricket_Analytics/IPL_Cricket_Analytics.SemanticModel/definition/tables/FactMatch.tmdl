@@ -1,0 +1,246 @@
+/// One row per match with approved result_for, D/L, full-match and chase-base flags.
+table FactMatch
+	lineageTag: 6acedbba-04a9-519b-b18f-40a96f5b0869
+
+	column match_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3b72ed6e-ca76-5e91-8548-68a196db2484
+		summarizeBy: none
+		sourceColumn: match_id
+
+	column season_year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5cd0a7c8-9d6e-5d9d-ae00-8a0d2fe41286
+		summarizeBy: none
+		sourceColumn: season_year
+
+	column venue_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 387cb132-4d1b-5c26-981b-950632bba215
+		summarizeBy: none
+		sourceColumn: venue_key
+
+	column match_date
+		dataType: string
+		isHidden
+		lineageTag: b5df6fb6-a055-5adb-af11-7d0ec40c6a87
+		summarizeBy: none
+		sourceColumn: match_date
+
+	column 'Match type'
+		dataType: string
+		lineageTag: 04c4627f-70c8-565b-a117-3234b94aa0b1
+		summarizeBy: none
+		sourceColumn: match_type
+
+	column is_playoff
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: df809f2b-fef1-56fd-bdcb-36e15761af20
+		summarizeBy: none
+		sourceColumn: is_playoff
+
+	column is_final
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9eded99b-efdc-53df-9916-5c3148a0915d
+		summarizeBy: none
+		sourceColumn: is_final
+
+	column batting_first_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1b0abc02-aa64-5cee-a9fc-3a51edc2791e
+		summarizeBy: none
+		sourceColumn: batting_first_team_key
+
+	column chasing_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 05e5fc5b-cc93-54f2-8e3f-2dabcf2d4a61
+		summarizeBy: none
+		sourceColumn: chasing_team_key
+
+	column winner_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dbb92e5f-404d-516f-8141-d1f81c900685
+		summarizeBy: none
+		sourceColumn: winner_team_key
+
+	column toss_winner_team_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3240fb5b-0ec8-5d38-b395-1abaf4d55c46
+		summarizeBy: none
+		sourceColumn: toss_winner_team_key
+
+	column 'Toss decision'
+		dataType: string
+		lineageTag: 1aff752d-3ab7-5319-9ea1-1c291c6052fc
+		summarizeBy: none
+		sourceColumn: toss_decision
+
+	column toss_winner_won
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7f3118b2-ce15-5ecc-9671-3bbd9bcbe909
+		summarizeBy: none
+		sourceColumn: toss_winner_won
+
+	column result
+		dataType: string
+		isHidden
+		lineageTag: 84dbc539-4846-5e89-9a32-2ca333beb699
+		summarizeBy: none
+		sourceColumn: result
+
+	column 'Win type'
+		dataType: string
+		lineageTag: c6262da8-88d2-5d2e-9a9e-c028d260fdb8
+		summarizeBy: none
+		sourceColumn: win_type
+
+	column 'Result for'
+		dataType: string
+		lineageTag: 2e4960ac-40d0-550a-af43-d04251703450
+		summarizeBy: none
+		sourceColumn: result_for
+
+	column result_margin
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cd0dfc18-4a70-52f9-8337-2c4ded4e5afc
+		summarizeBy: none
+		sourceColumn: result_margin
+
+	column is_super_over
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c886ffc5-58c6-55cb-b98f-2bff977cf8c4
+		summarizeBy: none
+		sourceColumn: is_super_over
+
+	column is_no_result
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 20de9bf4-fb0a-50a5-ad82-97bd703d3c68
+		summarizeBy: none
+		sourceColumn: is_no_result
+
+	column is_dls
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1d3fd806-369c-5416-976d-e1b317c314ca
+		summarizeBy: none
+		sourceColumn: is_dls
+
+	column target_overs
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: 007fdbe2-da6e-568f-850c-49ca28be0eeb
+		summarizeBy: none
+		sourceColumn: target_overs
+
+	column inn1_runs
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f6580291-a6ed-59dd-9b9d-cb16e38d43e7
+		summarizeBy: none
+		sourceColumn: inn1_runs
+
+	column inn2_runs
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fea636a9-09bf-52f2-9d4b-0d06322a26c8
+		summarizeBy: none
+		sourceColumn: inn2_runs
+
+	column is_full_match
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e81ff23c-aed1-5178-b11d-d357ecf76f14
+		summarizeBy: none
+		sourceColumn: is_full_match
+
+	column is_chase_base
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bac5e03f-9b1c-5d34-a4e6-d540397fd5a4
+		summarizeBy: none
+		sourceColumn: is_chase_base
+
+	column chase_won
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 23465bc3-1f56-50e7-8947-60e6b1369f72
+		summarizeBy: none
+		sourceColumn: chase_won
+
+	column is_decided_bf_chase
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2e6bd3e3-1711-5155-a5bb-5a8ff6e028a5
+		summarizeBy: none
+		sourceColumn: is_decided_bf_chase
+
+	column is_close_match
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8f806368-6923-5ad0-9836-86c9ec1333b8
+		summarizeBy: none
+		sourceColumn: is_close_match
+
+	column 'First-innings band'
+		dataType: string
+		lineageTag: a100d6ce-548f-53f4-a277-75f3733116ee
+		summarizeBy: none
+		sourceColumn: first_innings_band
+		sortByColumn: first_innings_band_sort
+
+	column first_innings_band_sort
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fd1288ad-96c7-5d80-ba53-a8d6b6a441b1
+		summarizeBy: none
+		sourceColumn: first_innings_band_sort
+
+	partition FactMatch = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/FactMatch.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"match_id", "season_year", "venue_key", "match_date", "match_type", "is_playoff", "is_final", "batting_first_team_key", "chasing_team_key", "winner_team_key", "toss_winner_team_key", "toss_decision", "toss_winner_won", "result", "win_type", "result_for", "result_margin", "is_super_over", "is_no_result", "is_dls", "target_overs", "inn1_runs", "inn2_runs", "is_full_match", "is_chase_base", "chase_won", "is_decided_bf_chase", "is_close_match", "first_innings_band", "first_innings_band_sort"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"match_id", Int64.Type}, {"season_year", Int64.Type}, {"venue_key", Int64.Type}, {"match_date", type text}, {"match_type", type text}, {"is_playoff", Int64.Type}, {"is_final", Int64.Type}, {"batting_first_team_key", Int64.Type}, {"chasing_team_key", Int64.Type}, {"winner_team_key", Int64.Type}, {"toss_winner_team_key", Int64.Type}, {"toss_decision", type text}, {"toss_winner_won", Int64.Type}, {"result", type text}, {"win_type", type text}, {"result_for", type text}, {"result_margin", Int64.Type}, {"is_super_over", Int64.Type}, {"is_no_result", Int64.Type}, {"is_dls", Int64.Type}, {"target_overs", type number}, {"inn1_runs", Int64.Type}, {"inn2_runs", Int64.Type}, {"is_full_match", Int64.Type}, {"is_chase_base", Int64.Type}, {"chase_won", Int64.Type}, {"is_decided_bf_chase", Int64.Type}, {"is_close_match", Int64.Type}, {"first_innings_band", type text}, {"first_innings_band_sort", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

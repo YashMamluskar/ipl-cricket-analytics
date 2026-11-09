@@ -1,0 +1,23 @@
+/// Disconnected copy of player names for the comparison visual.
+table 'Player B'
+	lineageTag: 2da6b993-e6a5-5a9c-83e0-157fcb8420b7
+
+	column 'Player B'
+		dataType: string
+		lineageTag: 0cca4ce2-1bbe-539e-9007-97ac26c21cee
+		summarizeBy: none
+		sourceColumn: player
+
+	partition 'Player B' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/DimPlayer.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"player"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"player", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

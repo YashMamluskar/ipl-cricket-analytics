@@ -1,0 +1,12 @@
+check_id,audit_item,check,result,status,note
+W01,Prediction-time availability,300 random states rebuilt from balls bowled so far (no later balls),300/300 identical,PASS,
+W02,Prediction-time availability,"Target known at chase start (target_runs = inn1 runs + 1, non-D/L)","all states non-D/L, target fixed",PASS,
+W03,Target leakage,Model features contain no outcome fields,"features = ['rrr', 'wickets_in_hand', 'log_balls_left', 'runs_needed']; overlap = []",PASS,
+W04,Target leakage,"States after the chase is decided excluded (runs needed > 0, wickets > 0, balls > 0)","18,814 live states",PASS,
+W05,Unseen seasons,"Train 2008-21 / test 2022-24, no match in both",train 832 / test 215 matches; shared 0,PASS,
+W06,Calibration,Expected calibration error on held-out states (<= 0.05),ECE = 0.050,FAIL,
+W07,Calibration,Calibration-in-the-large per test season within +/-5 pp,2022: -3.5 pp; 2023: -3.3 pp; 2024: -8.5 pp,FAIL,
+W08,Uncertainty (match-clustered),Brier improvement over base rate: 95% cluster-bootstrap CI excludes 0 (1000 resamples),0.110 (CI 0.083 to 0.134),PASS,
+W09,Uncertainty (match-clustered),Upper 95% bound of ECE <= 0.07,ECE CI 0.029-0.098,FAIL,
+W10,Calibration,Mean prediction inside the match-clustered 95% CI of the observed rate (deciles with >= 30 matches),8/10 deciles,FAIL,
+W11,Independence,One state per match (end of over 10): model beats base rate,n=212 matches; AUC 0.867; Brier 0.149 vs base 0.253,PASS,

@@ -1,0 +1,35 @@
+check_id,area,check_name,expected,actual,status
+Q01,Counts,Match rows loaded,1095,1095,PASS
+Q02,Counts,Delivery rows loaded,260920,260920,PASS
+Q03,Counts,Franchises / original team names,15 / 19,15 / 19,PASS
+Q04,Counts,Venues / original venue strings,36 / 58,36 / 58,PASS
+Q05,Counts,Distinct players,741,741,PASS
+Q06,Keys,"Duplicate natural delivery keys (match, inning, over, ball)",0,0,PASS
+Q07,Keys,Orphan deliveries (match_id not in matches),0,0,PASS
+Q08,Keys,Matches without deliveries,0,0,PASS
+Q09,Keys,Foreign keys enforced on deliveries (8) and matches (8),16,16,PASS
+Q10,Keys,Delivery teams consistent with match teams,0,0,PASS
+Q11,Runs,Total runs (all deliveries),347756,347756,PASS
+Q12,Runs,Total runs (regulation),347470,347470,PASS
+Q13,Runs,Extras total / batter runs total,17692 / 330064,17692 / 330064,PASS
+Q14,Runs,Extras by type (wd/nb/b/lb/pen),10064/1104/1270/5242/12,10064/1104/1270/5242/12,PASS
+Q15,Runs,Rows where bowler runs + byes + leg-byes + penalty <> total runs,0,0,PASS
+Q16,Runs,Innings totals in matches = sum of regulation deliveries (mismatching matches),0,0,PASS
+Q17,Legal balls,Legal deliveries (all / regulation),251471 / 251319,251471 / 251319,PASS
+Q18,Legal balls,is_legal_delivery consistent with wides/no-balls,0,0,PASS
+Q19,Overs,Seven-legal-ball overs retained and flagged,29,29,PASS
+Q20,Super overs,Super-over deliveries retained,161,161,PASS
+Q21,Super overs,Super-over matches: matches flag = deliveries,14,14,PASS
+Q22,Super overs,Regulation view contains no super-over balls,0,0,PASS
+Q23,Wickets,Bowler-credited wickets (all / regulation),11815 / 11795,11815 / 11795,PASS
+Q24,Wickets,Bowler wickets only from bowler-credited dismissal kinds,0,0,PASS
+Q25,Wickets,Retired hurt: kept (is_wicket=1) but not out and not bowler wicket,15 / 0,15 / 0,PASS
+Q26,Wickets,Raw is_wicket / player outs,12950 / 12935,12950 / 12935,PASS
+Q27,Results,result_for distribution (bat first / chasing / SO / NR),492 / 584 / 14 / 5,492 / 584 / 14 / 5,PASS
+Q28,Results,batting_first_team_id = innings-1 batting team in deliveries (mismatches),0,0,PASS
+Q29,Results,D/L matches preserved / D/L chases won by runs,21 / 6,21 / 6,PASS
+Q30,Results,Non-D/L targets = inn1_runs + 1 (mismatches),0,0,PASS
+Q31,Mappings,Every original team name maps to its franchise (mismatches),0,0,PASS
+Q32,Mappings,Every original venue maps to its standardized venue (mismatches),0,0,PASS
+Q33,Mappings,Imputed cities (Dubai + Sharjah),51,51,PASS
+Q34,Mappings,Seasons 2008-2024 (17 distinct),17,17,PASS

@@ -1,0 +1,61 @@
+/// 36 standardized grounds.
+table DimVenue
+	lineageTag: 0416eebe-009b-5e79-bf05-270146c82f52
+
+	column venue_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6108f155-1cf2-5289-a543-79adb8616c16
+		summarizeBy: none
+		sourceColumn: venue_key
+
+	column Venue
+		dataType: string
+		lineageTag: a9e93c1b-2ce9-53d3-86c1-0a42b72bd6af
+		summarizeBy: none
+		sourceColumn: venue
+
+	column City
+		dataType: string
+		lineageTag: 5278cf90-4323-571f-b43d-e376ae627e4d
+		summarizeBy: none
+		sourceColumn: city
+
+	column 'Full matches (all seasons)'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 693e8bc2-6152-5bde-8f17-e52b7519f55a
+		summarizeBy: none
+		sourceColumn: full_matches
+
+	column 'Decided matches (all seasons)'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1bedd807-7f6a-543e-9030-f94497d1c02f
+		summarizeBy: none
+		sourceColumn: decided
+
+	column 'Qualifies (20+ matches)'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1a1f25dc-1bf7-5417-8f79-e5f9036fa66a
+		summarizeBy: none
+		sourceColumn: qualifies_20
+
+	partition DimVenue = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "/DimVenue.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Selected = Table.SelectColumns(Promoted, {"venue_key", "venue", "city", "full_matches", "decided", "qualifies_20"}),
+				    Blanks = Table.TransformColumns(Selected, List.Transform(Table.ColumnNames(Selected), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Blanks, {{"venue_key", Int64.Type}, {"venue", type text}, {"city", type text}, {"full_matches", Int64.Type}, {"decided", Int64.Type}, {"qualifies_20", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
